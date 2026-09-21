@@ -41,6 +41,14 @@
          <lastmod>2026-09-21</lastmod>
     </url>
     <url>
+         <loc>https://swe-agent.com/latest/config/environments/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://swe-agent.com/latest/config/models/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
          <loc>https://swe-agent.com/latest/config/templates/</loc>
          <lastmod>2026-09-21</lastmod>
     </url>
@@ -125,6 +133,10 @@
          <lastmod>2026-09-21</lastmod>
     </url>
     <url>
+         <loc>https://swe-agent.com/latest/reference/parsers/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
          <loc>https://swe-agent.com/latest/reference/problem_statements/</loc>
          <lastmod>2026-09-21</lastmod>
     </url>
@@ -157,11 +169,11 @@
          <lastmod>2026-09-21</lastmod>
     </url>
     <url>
-         <loc>https://swe-agent.com/latest/usage/benchmarking/</loc>
+         <loc>https://swe-agent.com/latest/usage/cl_tutorial/</loc>
          <lastmod>2026-09-21</lastmod>
     </url>
     <url>
-         <loc>https://swe-agent.com/latest/usage/cl_tutorial/</loc>
+         <loc>https://swe-agent.com/latest/usage/cli/</loc>
          <lastmod>2026-09-21</lastmod>
     </url>
     <url>
@@ -182,6 +194,10 @@
     </url>
     <url>
          <loc>https://swe-agent.com/latest/usage/trajectories/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://swe-agent.com/latest/usage/whats_next/</loc>
          <lastmod>2026-09-21</lastmod>
     </url>
 </urlset>
