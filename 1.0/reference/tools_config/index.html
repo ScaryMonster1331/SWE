@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../../assets/image_theme.css">
     
+      <link rel="stylesheet" href="../../assets/bubbles.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -123,7 +125,7 @@
               </button>
             
             
-SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
+🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
 
           </div>
           
@@ -735,6 +737,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       
         
       
+        
+      
     
     
     
@@ -905,6 +909,34 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
   
     Batch mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/competitive_runs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitive runs
   
 
     
@@ -3288,6 +3320,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
               
               <article class="md-content__inner md-typeset">
                 
+
                   
 
 
@@ -3327,6 +3360,8 @@ For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
     <div class="doc doc-contents first">
             <p class="doc doc-class-bases">
               Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+        <p>Configuration for the tools that are made available to the agent.</p>
 
     
 
@@ -3527,6 +3562,8 @@ For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
 
     <div class="doc doc-contents ">
 
+        <p>The tool bundles to load.</p>
+
     </div>
 
 </div>
@@ -3548,6 +3585,9 @@ For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>Automatically generated documentation generated based on
+the loaded tool bundles.</p>
 
     </div>
 
@@ -3600,6 +3640,8 @@ For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>Whether to enable the bash tool in addition to the other tools specified in bundles.</p>
 
     </div>
 
@@ -3676,6 +3718,9 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>Filter out commands that are blocked by the environment
+(for example interactive commands like <code>vim</code>).</p>
 
     </div>
 
@@ -3798,6 +3843,8 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
 
     <div class="doc doc-contents ">
 
+        <p>The action parser that is responsible for parsing the model output into a thought and action.</p>
+
     </div>
 
 </div>
@@ -3870,6 +3917,10 @@ Unlike <code>install_commands</code>, these commands are part of the environment
 
     <div class="doc doc-contents ">
 
+        <p>This property returns the state commands from all bundles.
+State commands are commands that are used to get the state of the environment
+(e.g., the current working directory).</p>
+
     </div>
 
 </div>
@@ -3891,6 +3942,8 @@ Unlike <code>install_commands</code>, these commands are part of the environment
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>The command/tool to use to submit the solution.</p>
 
     </div>
 
@@ -4022,6 +4075,9 @@ Note: Does not interrupt running commands, but will stop the agent for the next 
             <p class="doc doc-class-bases">
               Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
 
+        <p>Filter out commands that are blocked by the environment
+(for example interactive commands like <code>vim</code>).</p>
+
     
 
         <p>Fields:</p>
@@ -4140,6 +4196,8 @@ Note: Does not interrupt running commands, but will stop the agent for the next 
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>The error template to use when a command is blocked.</p>
 
     </div>
 
@@ -4455,6 +4513,28 @@ Note: Does not interrupt running commands, but will stop the agent for the next 
 
 
                 
+
+
+<div class="floating-bubbles">
+<div class="floating-bubbles-title">Our projects</div>
+  <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
+    <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
+    <span class="bubble-tooltip">SWE-ReX</span>
+  </a>
+  <a href="https://swesmith.com" class="bubble" title="SWE-smith">
+    <img src="../../assets/swesmith_logo.png" alt="SWE-smith">
+    <span class="bubble-tooltip">SWE-smith</span>
+  </a>
+  <a href="https://swebench.com" class="bubble" title="SWE-bench">
+    <img src="../../assets/swebench_logo.png" alt="SWE-bench">
+    <span class="bubble-tooltip">SWE-bench</span>
+  </a>
+  <a href="https://www.swebench.com/sb-cli/" class="bubble" title="sb-cli">
+    <img src="../../assets/sbcli_logo.svg" alt="sb-cli">
+    <span class="bubble-tooltip">sb-cli</span>
+  </a>
+</div>
+
               </article>
             </div>
           
@@ -4548,4 +4628,4 @@ Note: Does not interrupt running commands, but will stop the agent for the next 
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+</script></body></html><!-- Floating Bubbles -->

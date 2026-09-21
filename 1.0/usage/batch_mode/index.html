@@ -11,7 +11,7 @@
         <link rel="prev" href="../inspector/">
       
       
-        <link rel="next" href="../whats_next/">
+        <link rel="next" href="../competitive_runs/">
       
       
         
@@ -61,6 +61,8 @@
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/image_theme.css">
+    
+      <link rel="stylesheet" href="../../assets/bubbles.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -123,7 +125,7 @@
               </button>
             
             
-SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
+🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
 
           </div>
           
@@ -742,6 +744,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       
         
       
+        
+      
     
     
     
@@ -1033,6 +1037,34 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../competitive_runs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2658,6 +2690,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
               
               <article class="md-content__inner md-typeset">
                 
+
                   
 
 
@@ -2684,7 +2717,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 <p>So you've decided to run SWE-agent on a lot of issues in parallel. Great, the <code>run-batch</code> command is exactly here for that.
 Let's run on three <a href="https://www.swebench.com/">SWE-bench</a> issues which will be downloaded automatically.</p>
 <div class="highlight"><pre><span></span><code>sweagent<span class="w"> </span>run-batch<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--config<span class="w"> </span>config/default.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--config<span class="w"> </span>config/anthropic_filemap.yaml<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.name<span class="w"> </span>gpt-4o<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.per_instance_cost_limit<span class="w"> </span><span class="m">2</span>.00<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--instances.type<span class="w"> </span>swe_bench<span class="w"> </span><span class="se">\</span>
@@ -2729,7 +2762,7 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
 <h2 id="running-in-parallel">Running in parallel</h2>
 <p>Let's speed things up and run on 5 instances at once. Only a single line to change:</p>
 <div class="highlight"><pre><span></span><code>sweagent<span class="w"> </span>run-batch<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--config<span class="w"> </span>config/default.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--config<span class="w"> </span>config/anthropic_filemap.yaml<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.name<span class="w"> </span>gpt-4o<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>--num_workers<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
 </span><span class="w">    </span>--agent.model.per_instance_cost_limit<span class="w"> </span><span class="m">2</span>.00<span class="w"> </span><span class="se">\</span>
@@ -2749,9 +2782,13 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
 <p class="admonition-title">All command line options</p>
 <p>See <a href="../../reference/run_batch_config/#sweagent.run.run_batch.RunBatchConfig"><code>RunBatchConfig</code></a> for an overview of all options.</p>
 </div>
+<p>When starting a lot of parallel instances with the docker backend, it might happen that you see some bottleneck effects
+(e.g., when running on a platform with few CPUs, you might see some timeouts because there's not enough CPUs to handle the startup of all containers in time).
+In this case, please set <code>--random_delay_multiplier</code> to e.g., 1. This means that every worker will wait a random time between <code>0s</code> and <code>1s * #workers</code> before starting,
+thereby easing CPU pressure. Default is 0.3.</p>
 <h2 id="loading-instances-from-a-file">Loading instances from a file</h2>
 <div class="highlight"><pre><span></span><code>sweagent<span class="w"> </span>run-batch<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--config<span class="w"> </span>config/default.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--config<span class="w"> </span>config/anthropic_filemap.yaml<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.name<span class="w"> </span>gpt-4o<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--instances.type<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--instances.path<span class="w"> </span>instances.yaml<span class="w"> </span><span class="se">\</span>
@@ -2762,14 +2799,20 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
 <p>Here'the simplest example of what such a file can look like</p>
 <div class="highlight"><span class="filename">instances.yaml</span><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image_name</span><span class="p">:</span><span class="w"> </span><span class="s">"python:3.11"</span><span class="w">  </span><span class="c1"># (1)!</span>
 <span class="w">  </span><span class="nt">problem_statement</span><span class="p">:</span><span class="w"> </span><span class="s">"A</span><span class="nv"> </span><span class="s">simple</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">problem"</span>
-<span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">"simple_test_problem"</span>
+<span class="w">  </span><span class="nt">instance_id</span><span class="p">:</span><span class="w"> </span><span class="s">"simple_test_problem"</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image_name</span><span class="p">:</span><span class="w"> </span><span class="s">"python:3.11"</span>
 <span class="w">  </span><span class="nt">problem_statement</span><span class="p">:</span><span class="w"> </span><span class="s">"Another</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">problem"</span>
-<span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">"simple_test_problem_2"</span>
+<span class="w">  </span><span class="nt">instance_id</span><span class="p">:</span><span class="w"> </span><span class="s">"simple_test_problem_2"</span>
 </code></pre></div>
 <ol>
 <li>Must be available locally or on dockerhub.</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Recent changes</p>
+<p>The <code>instance_id</code> key was named <code>id</code> until Mar 16, 2025.
+This was changed to add compatibility with the standard SWE-bench format.
+However, we temporarily support both names.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">More options</p>
 <ul>
@@ -2824,6 +2867,24 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
 <p>See <a href="../../reference/batch_instances/#sweagent.run.batch_instances.ExpertInstancesFromFile"><code>ExpertInstances</code></a>.</p>
 </div>
 <h2 id="output-files-and-next-steps">Output files and next steps</h2>
+<p>All patches generated (all submissions/predictions of the agent) are saved to a <code>preds.json</code> file.
+If you interrupt <code>sweagent run-batch</code>, some of these or the file itself might be missing.
+You can use the <code>sweagent merge-preds</code> utility to fix this.</p>
+<p>The <code>preds.json</code> file is very similar to the <code>.jsonl</code> format that is used for SWE-bench local runs.
+You can convert between the formats with</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="n">preds</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">"preds.json"</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"instance_id"</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">value</span><span class="p">}</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">preds</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="n">jsonl</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+<span class="n">Path</span><span class="p">(</span><span class="s2">"all_preds.jsonl"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jsonl</span><span class="p">))</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Next up</p>
+<p>Take a look at our <a href="../competitive_runs/">competitive runs tutorial</a>
+for more information on running on SWE-Bench and similar benchmarks.</p>
+</div>
 
 
 
@@ -2839,6 +2900,28 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
 
 
                 
+
+
+<div class="floating-bubbles">
+<div class="floating-bubbles-title">Our projects</div>
+  <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
+    <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
+    <span class="bubble-tooltip">SWE-ReX</span>
+  </a>
+  <a href="https://swesmith.com" class="bubble" title="SWE-smith">
+    <img src="../../assets/swesmith_logo.png" alt="SWE-smith">
+    <span class="bubble-tooltip">SWE-smith</span>
+  </a>
+  <a href="https://swebench.com" class="bubble" title="SWE-bench">
+    <img src="../../assets/swebench_logo.png" alt="SWE-bench">
+    <span class="bubble-tooltip">SWE-bench</span>
+  </a>
+  <a href="https://www.swebench.com/sb-cli/" class="bubble" title="sb-cli">
+    <img src="../../assets/sbcli_logo.svg" alt="sb-cli">
+    <span class="bubble-tooltip">sb-cli</span>
+  </a>
+</div>
+
               </article>
             </div>
           
@@ -2878,13 +2961,13 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
         
         
           
-          <a href="../whats_next/" class="md-footer__link md-footer__link--next" aria-label="Next: What's next?">
+          <a href="../competitive_runs/" class="md-footer__link md-footer__link--next" aria-label="Next: Competitive runs">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                What's next?
+                Competitive runs
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2932,4 +3015,4 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+</script></body></html><!-- Floating Bubbles -->

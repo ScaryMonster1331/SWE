@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../../assets/image_theme.css">
     
+      <link rel="stylesheet" href="../../assets/bubbles.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -123,7 +125,7 @@
               </button>
             
             
-SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
+🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
 
           </div>
           
@@ -735,6 +737,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       
         
       
+        
+      
     
     
     
@@ -905,6 +909,34 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
   
     Batch mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/competitive_runs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitive runs
   
 
     
@@ -2329,10 +2361,10 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.agents.TemplateConfig.warn_models_in_history" class="md-nav__link">
+  <a href="#sweagent.agent.agents.TemplateConfig.warnings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;warn_models_in_history
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;warnings
       
     </span>
   </a>
@@ -2840,10 +2872,10 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.agents.TemplateConfig.warn_models_in_history" class="md-nav__link">
+  <a href="#sweagent.agent.agents.TemplateConfig.warnings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;warn_models_in_history
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;warnings
       
     </span>
   </a>
@@ -2868,6 +2900,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
               
               <article class="md-content__inner md-typeset">
                 
+
                   
 
 
@@ -3030,12 +3063,12 @@ formatted by the agent and sent to the LM.</p>
    (sweagent.agent.agents.TemplateConfig.validate_template_jinja_syntax)" href="#sweagent.agent.agents.TemplateConfig.validate_template_jinja_syntax">validate_template_jinja_syntax</a></code>
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="            warn_models_in_history
+              <code><a class="autorefs autorefs-internal" title="            warnings
 
 
   
       pydantic-validator
-   (sweagent.agent.agents.TemplateConfig.warn_models_in_history)" href="#sweagent.agent.agents.TemplateConfig.warn_models_in_history">warn_models_in_history</a></code>
+   (sweagent.agent.agents.TemplateConfig.warnings)" href="#sweagent.agent.agents.TemplateConfig.warnings">warnings</a></code>
             </li>
         </ul>
 
@@ -3226,7 +3259,7 @@ relative to the SWE_AGENT_CONFIG_ROOT (if set) or the SWE-agent repository root<
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">next_step_truncated_observation_template</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">'Observation: {{observation}}&lt;response clipped&gt;&lt;NOTE&gt;Observations should not exceeded {{max_observation_length}} characters. {{elided_chars}} characters were elided. Please try a different command that produces less output or use head/tail/grep/redirect the output to a file. Do not use interactive pagers.&lt;/NOTE&gt;'</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">next_step_truncated_observation_template</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">'Observation: {{observation[:max_observation_length]}}&lt;response clipped&gt;&lt;NOTE&gt;Observations should not exceeded {{max_observation_length}} characters. {{elided_chars}} characters were elided. Please try a different command that produces less output or use head/tail/grep/redirect the output to a file. Do not use interactive pagers.&lt;/NOTE&gt;'</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3376,8 +3409,8 @@ Available variables: <code>bash_stdout</code>, <code>bash_stderr</code></p>
 <div class="doc doc-object doc-function">
 
 
-<h3 id="sweagent.agent.agents.TemplateConfig.warn_models_in_history" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">warn_models_in_history</span>
+<h3 id="sweagent.agent.agents.TemplateConfig.warnings" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">warnings</span>
 
 
   <span class="doc doc-labels">
@@ -3385,7 +3418,7 @@ Available variables: <code>bash_stdout</code>, <code>bash_stderr</code></p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">warn_models_in_history</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="typing_extensions.Self">Self</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">warnings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="typing_extensions.Self">Self</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3398,11 +3431,23 @@ Available variables: <code>bash_stdout</code>, <code>bash_stderr</code></p>
 <span class="normal">129</span>
 <span class="normal">130</span>
 <span class="normal">131</span>
-<span class="normal">132</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">"after"</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">warn_models_in_history</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">"after"</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">warnings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="s2">"swea-config"</span><span class="p">,</span> <span class="n">emoji</span><span class="o">=</span><span class="s2">"🔧"</span><span class="p">)</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">put_demos_in_history</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">demonstration_template</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="s2">"swea-config"</span><span class="p">,</span> <span class="n">emoji</span><span class="o">=</span><span class="s2">"🔧"</span><span class="p">)</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">"demonstration_template is ignored when put_demos_in_history is True"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_template</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">instance_template</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">"system_template/instance_template is not set, using empty string. Perhaps you were"</span>
+            <span class="s2">" overwriting the default config? See https://swe-agent.com/latest/usage/cl_tutorial/"</span>
+            <span class="s2">" for more information. Note: You can ignore this warning in human mode."</span>
+        <span class="p">)</span>
     <span class="k">return</span> <span class="bp">self</span>
 </code></pre></div></td></tr></tbody></table></div>
             </details>
@@ -3432,6 +3477,28 @@ Available variables: <code>bash_stdout</code>, <code>bash_stderr</code></p>
 
 
                 
+
+
+<div class="floating-bubbles">
+<div class="floating-bubbles-title">Our projects</div>
+  <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
+    <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
+    <span class="bubble-tooltip">SWE-ReX</span>
+  </a>
+  <a href="https://swesmith.com" class="bubble" title="SWE-smith">
+    <img src="../../assets/swesmith_logo.png" alt="SWE-smith">
+    <span class="bubble-tooltip">SWE-smith</span>
+  </a>
+  <a href="https://swebench.com" class="bubble" title="SWE-bench">
+    <img src="../../assets/swebench_logo.png" alt="SWE-bench">
+    <span class="bubble-tooltip">SWE-bench</span>
+  </a>
+  <a href="https://www.swebench.com/sb-cli/" class="bubble" title="sb-cli">
+    <img src="../../assets/sbcli_logo.svg" alt="sb-cli">
+    <span class="bubble-tooltip">sb-cli</span>
+  </a>
+</div>
+
               </article>
             </div>
           
@@ -3525,4 +3592,4 @@ Available variables: <code>bash_stdout</code>, <code>bash_stderr</code></p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+</script></body></html><!-- Floating Bubbles -->
