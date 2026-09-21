@@ -65,6 +65,16 @@
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-SG2NC1GDRD"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-SG2NC1GDRD",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-SG2NC1GDRD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -2489,8 +2499,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 <blockquote>
 <p>What can I do if my model doesn't support function calling?</p>
 </blockquote>
-<p>You can configure how to parse the model's response by choosing your <code>parse_function</code>.
-The default now is <code>function_calling</code>, but you can choose to <code>thought_action</code>.
+<p>You can configure how to parse the model's response by choosing your <code>agent.tools.parse_function</code>.
+The default now is <code>function_calling</code>, but you can change it to <code>thought_action</code>.
 More information in the <a href="../reference/parsers/">reference</a>.
 There are also some config example in our <a href="https://github.com/SWE-agent/SWE-agent/tree/main/config">config folder</a>.</p>
 <blockquote>
@@ -2534,6 +2544,8 @@ If none of them work, we throw an error which then tells you why we cannot initi
 
 
 
+
+  
 
 
 

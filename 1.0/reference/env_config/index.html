@@ -65,6 +65,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-SG2NC1GDRD"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-SG2NC1GDRD",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-SG2NC1GDRD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -2316,6 +2326,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;post_startup_command_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_commands" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2597,6 +2618,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;post_startup_command_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_commands" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2710,6 +2742,15 @@ To learn about the environment class itself, see the <a href="../env/">environme
                 (<code><span title="list">list</span>[<span title="str">str</span>]</code>)
             </li>
             <li>
+              <code><a class="autorefs autorefs-internal" title="            post_startup_command_timeout
+
+
+  
+      pydantic-field
+   (sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout)" href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout">post_startup_command_timeout</a></code>
+                (<code><span title="int">int</span></code>)
+            </li>
+            <li>
               <code><a class="autorefs autorefs-internal" title="            name
 
 
@@ -2781,6 +2822,31 @@ To learn about the environment class itself, see the <a href="../env/">environme
 
 
 
+<h3 id="sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">post_startup_command_timeout</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">post_startup_command_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">500</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Timeout for the post-startup commands.
+NOTE: The timeout applies to every command in <code>post_startup_commands</code> separately.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h3 id="sweagent.environment.swe_env.EnvironmentConfig.post_startup_commands" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">post_startup_commands</span>
 
@@ -2796,7 +2862,8 @@ To learn about the environment class itself, see the <a href="../env/">environme
     <div class="doc doc-contents ">
 
         <p>Execute these commands before starting to run the agent but after all other setup steps.
-They will be executed in the same shell as the agent.</p>
+They will be executed in the same shell as the agent.
+Note: Every command is passed as a string, not a list of arguments.</p>
 
     </div>
 
@@ -2844,6 +2911,8 @@ They will be executed in the same shell as the agent.</p>
 
 
 
+
+  
 
 
 
