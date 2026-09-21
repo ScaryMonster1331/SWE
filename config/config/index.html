@@ -48,6 +48,8 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,6 +91,28 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+              </button>
+            
+            
+<!-- This link won't work in local preview -->
+<a href="SWE-agent/background#enigma" class="clickable-banner">
+    <div>
+        News: SWE-agent <span class="enigma">EniGMA</span> solves cybersecurity and CTF challanges to achieve <span class="enigma">3x improvement over previous SOTA!</span>
+    </div>
+</a>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
       
     </div>
     
@@ -310,6 +334,8 @@
       
         
       
+        
+      
     
     
     
@@ -329,7 +355,7 @@
   <span class="md-ellipsis">
     
   
-    Background
+    Project Overview
   
 
     
@@ -351,7 +377,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Background
+    Project Overview
   
 
           </label>
@@ -374,6 +400,34 @@
     
   
     Agent-Computer Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../background/iat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive Agent Tools
   
 
     
@@ -566,7 +620,7 @@
   <span class="md-ellipsis">
     
   
-    Docker
+    Run with docker
   
 
     
@@ -698,6 +752,8 @@
       
         
       
+        
+      
     
     
     
@@ -762,6 +818,34 @@
     
   
     Command line usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/enigma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EnIGMA usage
   
 
     
@@ -960,6 +1044,8 @@
   
     
     
+      
+        
       
         
       
@@ -1218,6 +1304,34 @@
     
   
     Docker images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summarizers
   
 
     
@@ -1719,7 +1833,7 @@
 </code></pre></div>
 <p>In the <a href="https://github.com/princeton-nlp/SWE-agent/tree/main/config"><code>config/</code></a> directory, we recommend looking at...</p>
 <ul>
-<li><a href="https://github.com/princeton-nlp/SWE-agent/tree/main/config/configs"><code>configs/</code></a> for examples of properly formatted configuration files. Each configuration differs in its set of commands, input/output format, demonstrations, etc.</li>
+<li><a href="https://github.com/princeton-nlp/SWE-agent/tree/main/config/"><code>configs/</code></a> for examples of properly formatted configuration files. Each configuration differs in its set of commands, input/output format, demonstrations, etc.</li>
 <li><a href="https://github.com/princeton-nlp/SWE-agent/tree/main/config/commands"><code>commands/</code></a> for the bash implementations of the custom commands that SWE-agent uses to navigate + edit the codebase. More information <a href="../commands/">here</a>.</li>
 </ul>
 <div class="admonition hint">
@@ -1818,10 +1932,10 @@ or the SWE-agent repository root.</p>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">    </span><span class="no">state() {</span>
 <span class="w">      </span><span class="no">local working_dir="$PWD";</span>
-<span class="w">      </span><span class="no">if [ -z $CURRENT_FILE ]; then</span>
+<span class="w">      </span><span class="no">if [ -z "$CURRENT_FILE" ]; then</span>
 <span class="w">          </span><span class="no">echo '{"open_file": "n/a", "working_dir": "'$working_dir'"}';</span>
 <span class="w">      </span><span class="no">else</span>
-<span class="w">          </span><span class="no">echo '{"open_file": "'$(realpath $CURRENT_FILE)'", "working_dir": "'$working_dir'"}';</span>
+<span class="w">          </span><span class="no">echo '{"open_file": "'$(realpath "$CURRENT_FILE")'", "working_dir": "'$working_dir'"}';</span>
 <span class="w">      </span><span class="no">fi</span>
 <span class="w">    </span><span class="no">};</span>
 <span class="nt">parse_function</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ThoughtActionParser</span>

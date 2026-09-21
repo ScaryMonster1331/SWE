@@ -48,6 +48,8 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,6 +91,28 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+              </button>
+            
+            
+<!-- This link won't work in local preview -->
+<a href="SWE-agent/background#enigma" class="clickable-banner">
+    <div>
+        News: SWE-agent <span class="enigma">EniGMA</span> solves cybersecurity and CTF challanges to achieve <span class="enigma">3x improvement over previous SOTA!</span>
+    </div>
+</a>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
       
     </div>
     
@@ -310,6 +334,8 @@
       
         
       
+        
+      
     
     
     
@@ -329,7 +355,7 @@
   <span class="md-ellipsis">
     
   
-    Background
+    Project Overview
   
 
     
@@ -351,7 +377,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Background
+    Project Overview
   
 
           </label>
@@ -374,6 +400,34 @@
     
   
     Agent-Computer Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../background/iat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive Agent Tools
   
 
     
@@ -566,7 +620,7 @@
   <span class="md-ellipsis">
     
   
-    Docker
+    Run with docker
   
 
     
@@ -698,6 +752,8 @@
       
         
       
+        
+      
     
     
     
@@ -762,6 +818,34 @@
     
   
     Command line usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/enigma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EnIGMA usage
   
 
     
@@ -969,6 +1053,8 @@
       
         
       
+        
+      
     
     
     
@@ -1136,6 +1222,34 @@
     
   
     Docker images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/summarizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summarizers
   
 
     
@@ -2457,7 +2571,10 @@
 <span class="normal">877</span>
 <span class="normal">878</span>
 <span class="normal">879</span>
-<span class="normal">880</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">InstanceBuilder</span><span class="p">:</span>
+<span class="normal">880</span>
+<span class="normal">881</span>
+<span class="normal">882</span>
+<span class="normal">883</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">InstanceBuilder</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""This helper class is used to build the data for an instance object,</span>
 <span class="sd">        retrieving problem statements from github issues or local files and setting</span>
@@ -2490,21 +2607,24 @@
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_description"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="sa">f</span><span class="s2">"The challenge web server is running on `</span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">` port `</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">` and you can access it from within the container environment using `nc </span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">`."</span>
+                <span class="sa">f</span><span class="s2">"The challenge web server is running on `</span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">` port `</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">` and you can access it from within the container environment using `connect_start </span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">`."</span>
             <span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">set_problem_statement_from_challenge_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""For CTF challenges"""</span>
         <span class="n">challenge</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"files"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"files"</span><span class="p">,</span> <span class="s2">"No files are provided in this challenge."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"files"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"files"</span><span class="p">,</span> <span class="p">[])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"points"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"points"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"category_friendly"</span><span class="p">]</span> <span class="o">=</span> <span class="n">CTF_CHALLENGES_CATEGORIES</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">challenge</span><span class="p">[</span><span class="s2">"category"</span><span class="p">])</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"docker-compose.yml"</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found docker_compose file in </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"docker_compose"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"docker-compose.yml"</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"port"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"internal_port"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"box"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"port"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"internal_port"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"port"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">"box"</span> <span class="ow">in</span> <span class="n">challenge</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="p">[</span><span class="s2">"box"</span><span class="p">]</span> <span class="ow">or</span> <span class="s2">"127.0.0.1"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"file_path"</span><span class="p">]</span> <span class="o">=</span> <span class="n">file_path</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_server_description</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"port"</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_problem_statement_from_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">challenge</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">challenge</span><span class="p">[</span><span class="s1">'description'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -2559,7 +2679,7 @@
             <span class="k">except</span> <span class="n">InvalidGitRepositoryError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Could not find git repository at </span><span class="si">{</span><span class="n">path</span><span class="si">=}</span><span class="s2">."</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
-            <span class="k">if</span> <span class="n">repo</span><span class="o">.</span><span class="n">is_dirty</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">repo</span><span class="o">.</span><span class="n">is_dirty</span><span class="p">()</span> <span class="ow">and</span> <span class="s2">"PYTEST_CURRENT_TEST"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Local git repository </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> is dirty. Please commit or stash changes."</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"base_commit"</span><span class="p">]</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">hexsha</span>
@@ -2686,10 +2806,7 @@ path to a markdown or text file.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">793</span>
-<span class="normal">794</span>
-<span class="normal">795</span>
-<span class="normal">796</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">796</span>
 <span class="normal">797</span>
 <span class="normal">798</span>
 <span class="normal">799</span>
@@ -2697,7 +2814,10 @@ path to a markdown or text file.</p>
 <span class="normal">801</span>
 <span class="normal">802</span>
 <span class="normal">803</span>
-<span class="normal">804</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_problem_statement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="normal">804</span>
+<span class="normal">805</span>
+<span class="normal">806</span>
+<span class="normal">807</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_problem_statement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Get problem statement for a single instance from a github issue url or a</span>
 <span class="sd">    path to a markdown or text file.</span>
 <span class="sd">    """</span>
@@ -2749,18 +2869,24 @@ path to a markdown or text file.</p>
 <span class="normal">777</span>
 <span class="normal">778</span>
 <span class="normal">779</span>
-<span class="normal">780</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_problem_statement_from_challenge_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">780</span>
+<span class="normal">781</span>
+<span class="normal">782</span>
+<span class="normal">783</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_problem_statement_from_challenge_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""For CTF challenges"""</span>
     <span class="n">challenge</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"files"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"files"</span><span class="p">,</span> <span class="s2">"No files are provided in this challenge."</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"files"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"files"</span><span class="p">,</span> <span class="p">[])</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"points"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"points"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"category_friendly"</span><span class="p">]</span> <span class="o">=</span> <span class="n">CTF_CHALLENGES_CATEGORIES</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">challenge</span><span class="p">[</span><span class="s2">"category"</span><span class="p">])</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"docker-compose.yml"</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found docker_compose file in </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"docker_compose"</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"docker-compose.yml"</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"port"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"internal_port"</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"box"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"port"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"internal_port"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">challenge</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"port"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">"box"</span> <span class="ow">in</span> <span class="n">challenge</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">]</span> <span class="o">=</span> <span class="n">challenge</span><span class="p">[</span><span class="s2">"box"</span><span class="p">]</span> <span class="ow">or</span> <span class="s2">"127.0.0.1"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"file_path"</span><span class="p">]</span> <span class="o">=</span> <span class="n">file_path</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">set_server_description</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_name"</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"port"</span><span class="p">])</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">set_problem_statement_from_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">challenge</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">challenge</span><span class="p">[</span><span class="s1">'description'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -2813,7 +2939,7 @@ path to a markdown or text file.</p>
         <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s2">"challenge"</span><span class="p">][</span><span class="s2">"server_description"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="sa">f</span><span class="s2">"The challenge web server is running on `</span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">` port `</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">` and you can access it from within the container environment using `nc </span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">`."</span>
+            <span class="sa">f</span><span class="s2">"The challenge web server is running on `</span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2">` port `</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">` and you can access it from within the container environment using `connect_start </span><span class="si">{</span><span class="n">server_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">`."</span>
         <span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
             </details>
@@ -2853,13 +2979,7 @@ path to a markdown or text file.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1023</span>
-<span class="normal">1024</span>
-<span class="normal">1025</span>
-<span class="normal">1026</span>
-<span class="normal">1027</span>
-<span class="normal">1028</span>
-<span class="normal">1029</span>
+                <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1029</span>
 <span class="normal">1030</span>
 <span class="normal">1031</span>
 <span class="normal">1032</span>
@@ -2992,7 +3112,13 @@ path to a markdown or text file.</p>
 <span class="normal">1159</span>
 <span class="normal">1160</span>
 <span class="normal">1161</span>
-<span class="normal">1162</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PatchFormatter</span><span class="p">:</span>
+<span class="normal">1162</span>
+<span class="normal">1163</span>
+<span class="normal">1164</span>
+<span class="normal">1165</span>
+<span class="normal">1166</span>
+<span class="normal">1167</span>
+<span class="normal">1168</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PatchFormatter</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">patch</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -3213,13 +3339,7 @@ that returns the file content as a string.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1024</span>
-<span class="normal">1025</span>
-<span class="normal">1026</span>
-<span class="normal">1027</span>
-<span class="normal">1028</span>
-<span class="normal">1029</span>
-<span class="normal">1030</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1030</span>
 <span class="normal">1031</span>
 <span class="normal">1032</span>
 <span class="normal">1033</span>
@@ -3231,7 +3351,13 @@ that returns the file content as a string.</p>
 <span class="normal">1039</span>
 <span class="normal">1040</span>
 <span class="normal">1041</span>
-<span class="normal">1042</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1042</span>
+<span class="normal">1043</span>
+<span class="normal">1044</span>
+<span class="normal">1045</span>
+<span class="normal">1046</span>
+<span class="normal">1047</span>
+<span class="normal">1048</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">patch</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">read_method</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span>
@@ -3276,13 +3402,13 @@ that returns the file content as a string.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1149</span>
-<span class="normal">1150</span>
-<span class="normal">1151</span>
-<span class="normal">1152</span>
-<span class="normal">1153</span>
-<span class="normal">1154</span>
-<span class="normal">1155</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1155</span>
+<span class="normal">1156</span>
+<span class="normal">1157</span>
+<span class="normal">1158</span>
+<span class="normal">1159</span>
+<span class="normal">1160</span>
+<span class="normal">1161</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">concat_files_strings</span><span class="p">(</span><span class="n">files</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Concatenate multiple `read_files` outputs into a single string."""</span>
     <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
@@ -3390,13 +3516,7 @@ The first line is line 1.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1065</span>
-<span class="normal">1066</span>
-<span class="normal">1067</span>
-<span class="normal">1068</span>
-<span class="normal">1069</span>
-<span class="normal">1070</span>
-<span class="normal">1071</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1071</span>
 <span class="normal">1072</span>
 <span class="normal">1073</span>
 <span class="normal">1074</span>
@@ -3431,7 +3551,13 @@ The first line is line 1.</p>
 <span class="normal">1103</span>
 <span class="normal">1104</span>
 <span class="normal">1105</span>
-<span class="normal">1106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">format_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">starts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">stops</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="o">*</span><span class="p">,</span> <span class="n">linenos</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">1106</span>
+<span class="normal">1107</span>
+<span class="normal">1108</span>
+<span class="normal">1109</span>
+<span class="normal">1110</span>
+<span class="normal">1111</span>
+<span class="normal">1112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">format_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">starts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">stops</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="o">*</span><span class="p">,</span> <span class="n">linenos</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Reads file and returns string representation of the relevant lines.</span>
 
 <span class="sd">    Args:</span>
@@ -3749,13 +3875,7 @@ The first line is line 1.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 997</span>
-<span class="normal"> 998</span>
-<span class="normal"> 999</span>
-<span class="normal">1000</span>
-<span class="normal">1001</span>
-<span class="normal">1002</span>
-<span class="normal">1003</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1003</span>
 <span class="normal">1004</span>
 <span class="normal">1005</span>
 <span class="normal">1006</span>
@@ -3772,7 +3892,13 @@ The first line is line 1.</p>
 <span class="normal">1017</span>
 <span class="normal">1018</span>
 <span class="normal">1019</span>
-<span class="normal">1020</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">format_trajectory_markdown</span><span class="p">(</span><span class="n">trajectory</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]):</span>
+<span class="normal">1020</span>
+<span class="normal">1021</span>
+<span class="normal">1022</span>
+<span class="normal">1023</span>
+<span class="normal">1024</span>
+<span class="normal">1025</span>
+<span class="normal">1026</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">format_trajectory_markdown</span><span class="p">(</span><span class="n">trajectory</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]):</span>
 <span class="w">    </span><span class="sd">"""Format a trajectory as a markdown string for use in gh PR description."""</span>
     <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s2">"&lt;details&gt;"</span><span class="p">,</span>
@@ -3818,13 +3944,7 @@ The first line is line 1.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">974</span>
-<span class="normal">975</span>
-<span class="normal">976</span>
-<span class="normal">977</span>
-<span class="normal">978</span>
-<span class="normal">979</span>
-<span class="normal">980</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">980</span>
 <span class="normal">981</span>
 <span class="normal">982</span>
 <span class="normal">983</span>
@@ -3834,7 +3954,13 @@ The first line is line 1.</p>
 <span class="normal">987</span>
 <span class="normal">988</span>
 <span class="normal">989</span>
-<span class="normal">990</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_associated_commit_urls</span><span class="p">(</span><span class="n">org</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">repo</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">issue_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="normal">990</span>
+<span class="normal">991</span>
+<span class="normal">992</span>
+<span class="normal">993</span>
+<span class="normal">994</span>
+<span class="normal">995</span>
+<span class="normal">996</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_associated_commit_urls</span><span class="p">(</span><span class="n">org</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">repo</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">issue_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Return the URLs of commits that would close an issue."""</span>
     <span class="n">api</span> <span class="o">=</span> <span class="n">GhApi</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
     <span class="c1"># Strangely the "pull_request" field of api.issues.get is often not set</span>
@@ -4298,10 +4424,7 @@ for return format</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/utils.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">883</span>
-<span class="normal">884</span>
-<span class="normal">885</span>
-<span class="normal">886</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">886</span>
 <span class="normal">887</span>
 <span class="normal">888</span>
 <span class="normal">889</span>
@@ -4386,7 +4509,13 @@ for return format</p>
 <span class="normal">968</span>
 <span class="normal">969</span>
 <span class="normal">970</span>
-<span class="normal">971</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_instances</span><span class="p">(</span>
+<span class="normal">971</span>
+<span class="normal">972</span>
+<span class="normal">973</span>
+<span class="normal">974</span>
+<span class="normal">975</span>
+<span class="normal">976</span>
+<span class="normal">977</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_instances</span><span class="p">(</span>
     <span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">base_commit</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">split</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -4441,6 +4570,9 @@ for return format</p>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">repo_path</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">repo_path</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Specified repository path </span><span class="si">{</span><span class="n">repo_path</span><span class="si">}</span><span class="s2"> does not exist"</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="s2">"repo_path must be empty if running over multiple problem statements"</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
@@ -5201,7 +5333,7 @@ This function uses a file descriptor to read data from the subprocess in a non-b
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">select</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="n">fd</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="mf">0.01</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 
     <span class="n">command_done</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">(</span><span class="n">end_time</span><span class="p">,</span> <span class="n">end_time_no_output</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">(</span><span class="n">end_time</span><span class="p">,</span> <span class="n">end_time_no_output</span><span class="p">)</span> <span class="ow">and</span> <span class="n">session</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">ready_to_read</span><span class="p">(</span><span class="n">fd</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">data</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="mi">4096</span><span class="p">)</span>
@@ -5221,7 +5353,7 @@ This function uses a file descriptor to read data from the subprocess in a non-b
 
     <span class="k">if</span> <span class="n">session</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Subprocess exited unexpectedly.</span><span class="se">\n</span><span class="s2">Current buffer: </span><span class="si">{</span><span class="n">decoded</span><span class="si">}</span><span class="s2">"</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
     <span class="n">current_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">command_done</span> <span class="ow">and</span> <span class="n">current_time</span> <span class="o">&gt;=</span> <span class="nb">min</span><span class="p">(</span><span class="n">end_time</span><span class="p">,</span> <span class="n">end_time_no_output</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">current_time</span> <span class="o">&gt;=</span> <span class="n">end_time</span><span class="p">:</span>
@@ -5752,7 +5884,7 @@ has not been thoroughly tested.</p>
 
     <span class="k">if</span> <span class="n">container</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Subprocess exited unexpectedly.</span><span class="se">\n</span><span class="s2">Current buffer: </span><span class="si">{</span><span class="n">decoded</span><span class="si">}</span><span class="s2">"</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
 
     <span class="n">current_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">process_done</span> <span class="ow">and</span> <span class="n">current_time</span> <span class="o">&gt;=</span> <span class="nb">min</span><span class="p">(</span><span class="n">end_time</span><span class="p">,</span> <span class="n">end_time_no_output</span><span class="p">):</span>
