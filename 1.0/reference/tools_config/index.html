@@ -2303,6 +2303,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;max_consecutive_execution_timeouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2318,6 +2329,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;parse_function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.registry_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;registry_variables
       
     </span>
   </a>
@@ -2373,6 +2395,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.total_execution_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;total_execution_timeout
       
     </span>
   </a>
@@ -2963,6 +2996,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;max_consecutive_execution_timeouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2978,6 +3022,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;parse_function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.registry_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;registry_variables
       
     </span>
   </a>
@@ -3033,6 +3088,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.total_execution_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;total_execution_timeout
       
     </span>
   </a>
@@ -3294,6 +3360,15 @@ For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
                 (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>)
             </li>
             <li>
+              <code><a class="autorefs autorefs-internal" title="            registry_variables
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.registry_variables)" href="#sweagent.tools.tools.ToolConfig.registry_variables">registry_variables</a></code>
+                (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>)
+            </li>
+            <li>
               <code><a class="autorefs autorefs-internal" title="            submit_command
 
 
@@ -3386,6 +3461,24 @@ For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
   
       pydantic-field
    (sweagent.tools.tools.ToolConfig.install_timeout)" href="#sweagent.tools.tools.ToolConfig.install_timeout">install_timeout</a></code>
+                (<code><span title="int">int</span></code>)
+            </li>
+            <li>
+              <code><a class="autorefs autorefs-internal" title="            total_execution_timeout
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.total_execution_timeout)" href="#sweagent.tools.tools.ToolConfig.total_execution_timeout">total_execution_timeout</a></code>
+                (<code><span title="int">int</span></code>)
+            </li>
+            <li>
+              <code><a class="autorefs autorefs-internal" title="            max_consecutive_execution_timeouts
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts)" href="#sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts">max_consecutive_execution_timeouts</a></code>
                 (<code><span title="int">int</span></code>)
             </li>
         </ul>
@@ -3630,6 +3723,30 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
 
 
 
+<h3 id="sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">max_consecutive_execution_timeouts</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">max_consecutive_execution_timeouts</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Maximum number of consecutive execution timeouts before the agent exits.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h3 id="sweagent.tools.tools.ToolConfig.multi_line_command_endings" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">multi_line_command_endings</span>
 
@@ -3670,6 +3787,30 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.tools.tools.ToolConfig.registry_variables" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">registry_variables</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">registry_variables</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Populate the registry with these variables. Will be written out as json in the registry file.</p>
 
     </div>
 
@@ -3788,6 +3929,31 @@ These commands are executed in a subprocess and are not part of the environment 
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.tools.tools.ToolConfig.total_execution_timeout" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">total_execution_timeout</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total_execution_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">1800</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Timeout for executing all commands in the environment.
+Note: Does not interrupt running commands, but will stop the agent for the next step.</p>
 
     </div>
 
@@ -3917,7 +4083,7 @@ These commands are executed in a subprocess and are not part of the environment 
 
     <div class="doc doc-contents ">
 
-        <p>Block any command that matches one of these regexes unless it also matches the regex</p>
+        <p>Block any command that matches one of these names unless it also matches the regex</p>
 
     </div>
 
@@ -3936,7 +4102,7 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'vim'</span><span class="p">,</span> <span class="s1">'vi'</span><span class="p">,</span> <span class="s1">'emacs'</span><span class="p">,</span> <span class="s1">'nano'</span><span class="p">,</span> <span class="s1">'nohup'</span><span class="p">,</span> <span class="s1">'git'</span><span class="p">,</span> <span class="s1">'gdb'</span><span class="p">,</span> <span class="s1">'less'</span><span class="p">,</span> <span class="s1">'tail -f'</span><span class="p">,</span> <span class="s1">'python -m venv'</span><span class="p">,</span> <span class="s1">'make'</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'vim'</span><span class="p">,</span> <span class="s1">'vi'</span><span class="p">,</span> <span class="s1">'emacs'</span><span class="p">,</span> <span class="s1">'nano'</span><span class="p">,</span> <span class="s1">'nohup'</span><span class="p">,</span> <span class="s1">'gdb'</span><span class="p">,</span> <span class="s1">'less'</span><span class="p">,</span> <span class="s1">'tail -f'</span><span class="p">,</span> <span class="s1">'python -m venv'</span><span class="p">,</span> <span class="s1">'make'</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3982,7 +4148,7 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist_standalone</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'python'</span><span class="p">,</span> <span class="s1">'python3'</span><span class="p">,</span> <span class="s1">'ipython'</span><span class="p">,</span> <span class="s1">'bash'</span><span class="p">,</span> <span class="s1">'sh'</span><span class="p">,</span> <span class="s1">'/bin/bash'</span><span class="p">,</span> <span class="s1">'/bin/sh'</span><span class="p">,</span> <span class="s1">'nohup'</span><span class="p">,</span> <span class="s1">'vi'</span><span class="p">,</span> <span class="s1">'vim'</span><span class="p">,</span> <span class="s1">'emacs'</span><span class="p">,</span> <span class="s1">'nano'</span><span class="p">,</span> <span class="s1">'su'</span><span class="p">,</span> <span class="s1">'pip install .'</span><span class="p">,</span> <span class="s1">'pip install -e .'</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist_standalone</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'python'</span><span class="p">,</span> <span class="s1">'python3'</span><span class="p">,</span> <span class="s1">'ipython'</span><span class="p">,</span> <span class="s1">'bash'</span><span class="p">,</span> <span class="s1">'sh'</span><span class="p">,</span> <span class="s1">'/bin/bash'</span><span class="p">,</span> <span class="s1">'/bin/sh'</span><span class="p">,</span> <span class="s1">'nohup'</span><span class="p">,</span> <span class="s1">'vi'</span><span class="p">,</span> <span class="s1">'vim'</span><span class="p">,</span> <span class="s1">'emacs'</span><span class="p">,</span> <span class="s1">'nano'</span><span class="p">,</span> <span class="s1">'su'</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

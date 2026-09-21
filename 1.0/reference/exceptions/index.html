@@ -2464,10 +2464,10 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.AttemptCostLimitExceededError" class="md-nav__link">
+  <a href="#sweagent.exceptions.ContentPolicyViolationError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AttemptCostLimitExceededError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ContentPolicyViolationError
       
     </span>
   </a>
@@ -2543,6 +2543,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.InstanceCallLimitExceededError" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;InstanceCallLimitExceededError
+      
+    </span>
+  </a>
   
 </li>
         
@@ -2636,10 +2647,10 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.AttemptCostLimitExceededError" class="md-nav__link">
+  <a href="#sweagent.exceptions.ContentPolicyViolationError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AttemptCostLimitExceededError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ContentPolicyViolationError
       
     </span>
   </a>
@@ -2715,6 +2726,17 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.InstanceCallLimitExceededError" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;InstanceCallLimitExceededError
+      
+    </span>
+  </a>
   
 </li>
         
@@ -2808,8 +2830,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 
 
 
-<h3 id="sweagent.exceptions.AttemptCostLimitExceededError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">AttemptCostLimitExceededError</span>
+<h3 id="sweagent.exceptions.ContentPolicyViolationError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ContentPolicyViolationError</span>
 
 
 </h3>
@@ -2819,7 +2841,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 
 
 
-        <p>Raised when we exceed the cost limit for an attempt</p>
+        <p>Raised when the model response violates a content policy</p>
 
 
 
@@ -3032,6 +3054,35 @@ calling parser.</p>
 
 
   </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="sweagent.exceptions.InstanceCallLimitExceededError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">InstanceCallLimitExceededError</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+        <p>Raised when we exceed the per instance call limit</p>
+
+
+
+
+
+
+
+
 
     </div>
 
