@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -739,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -937,6 +943,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -2347,21 +2381,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.swe_env.EnvironmentConfig.name" class="md-nav__link">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.repo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;name
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;post_startup_command_timeout
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo
       
     </span>
   </a>
@@ -2380,10 +2403,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.swe_env.EnvironmentConfig.repo" class="md-nav__link">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;post_startup_command_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;name
       
     </span>
   </a>
@@ -2639,21 +2673,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.swe_env.EnvironmentConfig.name" class="md-nav__link">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.repo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;name
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;post_startup_command_timeout
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo
       
     </span>
   </a>
@@ -2672,10 +2695,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.swe_env.EnvironmentConfig.repo" class="md-nav__link">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;post_startup_command_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.swe_env.EnvironmentConfig.name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;name
       
     </span>
   </a>
@@ -2833,8 +2867,8 @@ To learn about the environment class itself, see the <a href="../env/">environme
 
 
 
-<h3 id="sweagent.environment.swe_env.EnvironmentConfig.name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">name</span>
+<h3 id="sweagent.environment.swe_env.EnvironmentConfig.repo" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">repo</span>
 
 
   <span class="doc doc-labels">
@@ -2842,35 +2876,12 @@ To learn about the environment class itself, see the <a href="../env/">environme
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">'main'</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo</span><span class="p">:</span> <span class="n"><span title="sweagent.environment.repo.RepoConfig">RepoConfig</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">post_startup_command_timeout</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">post_startup_command_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">500</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Timeout for the post-startup commands.
-NOTE: The timeout applies to every command in <code>post_startup_commands</code> separately.</p>
+        <p>Repository options.</p>
 
     </div>
 
@@ -2906,8 +2917,8 @@ Note: Every command is passed as a string, not a list of arguments.</p>
 
 
 
-<h3 id="sweagent.environment.swe_env.EnvironmentConfig.repo" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">repo</span>
+<h3 id="sweagent.environment.swe_env.EnvironmentConfig.post_startup_command_timeout" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">post_startup_command_timeout</span>
 
 
   <span class="doc doc-labels">
@@ -2915,12 +2926,35 @@ Note: Every command is passed as a string, not a list of arguments.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo</span><span class="p">:</span> <span class="n"><span title="sweagent.environment.repo.RepoConfig">RepoConfig</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">post_startup_command_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">500</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Repository options.</p>
+        <p>Timeout for the post-startup commands.
+NOTE: The timeout applies to every command in <code>post_startup_commands</code> separately.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.environment.swe_env.EnvironmentConfig.name" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">'main'</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
 
     </div>
 
@@ -2953,8 +2987,87 @@ Note: Every command is passed as a string, not a list of arguments.</p>
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -3066,4 +3179,4 @@ Note: Every command is passed as a string, not a list of arguments.</p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

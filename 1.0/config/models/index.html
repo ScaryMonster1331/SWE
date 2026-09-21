@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -739,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -937,6 +943,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -1549,6 +1583,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Using multiple keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-cost-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom cost tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2676,6 +2727,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Using multiple keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-cost-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom cost tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2731,6 +2799,9 @@
 <h3 id="local-models">Local models</h3>
 <p>See <a href="../../installation/keys/">the model section</a> in the installation guide.
 Remember to unset spending limits and configure the action parser if you cannot support function calling.</p>
+<p>For "cost" tracking with local models, you can optionally provide a custom <code>litellm_model_registry</code> file in your configuration.
+This allows you to define custom pricing information for your local models instead of disabling cost limits entirely.
+See the <a href="../../installation/keys/#custom-model-registry-for-cost-tracking">local models section</a> for detailed instructions.</p>
 <h3 id="anthropic-claude">Anthropic Claude</h3>
 <p>Prompt caching makes SWE-agent several times more affordable. While this is done automatically for models like <code>gpt-4o</code>,
 care has to be taken for Anthropic Claude, as you need to manually set the cache break points.</p>
@@ -2754,11 +2825,19 @@ To support more parallel running instances, supply multiple keys as described be
 <p>We recommend that you check how often you hit the cache. A very simple way is to go to your trajectory directory and grep like so:</p>
 <div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-o<span class="w"> </span><span class="s2">"cached_tokens=[0-9]*"</span><span class="w"> </span>django__django-11299.debug.log
 </code></pre></div>
-<p>Note that the maximum number of output tokens of Claude 3.7 can be extended with extra headers.
+<p>Note that the maximum number of output tokens of Claude 3.7/4 can be extended with extra headers.
 See <a href="https://github.com/BerriAI/litellm/issues/8984">this issue in litellm</a> and and <a href="https://github.com/SWE-agent/SWE-agent/issues/1035">swe-agent PR #1035</a>
 for omore information.
 Since <a href="https://github.com/SWE-agent/SWE-agent/pull/1036">#1036</a> you can also manually set the maximum output tokens and override the information
 from <code>litellm</code>.</p>
+<p>To use extended thinking, you can set the following in your config:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">'claude-sonnet-4-20250514'</span>
+<span class="w">  </span><span class="nt">model</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.</span>
+<span class="w">    </span><span class="nt">completion_kwargs</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">reasoning_effort</span><span class="p">:</span><span class="w"> </span><span class="s">'high'</span>
+</code></pre></div>
 <h3 id="o1">o1</h3>
 <p>Make sure to set</p>
 <div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
@@ -2770,6 +2849,41 @@ from <code>litellm</code>.</p>
 <h2 id="using-multiple-keys">Using multiple keys</h2>
 <p>We support rotating through multiple keys for <a href="../../usage/batch_mode/"><code>run-batch</code></a>. For this, concatenate all keys with <code>:::</code> and set them via the <code>--agent.model.api_key</code> flag.
 Every thread (i.e., every parallel running agent that is working on one task instance) will stick to one key during the entire run, i.e., this does not break prompt caching.</p>
+<h3 id="custom-cost-tracking">Custom cost tracking</h3>
+<p>If you want to track costs for models not in the default litellm registry, you can provide a custom model registry file. This is particularly useful for:</p>
+<ul>
+<li>New models not yet supported by litellm's default registry</li>
+<li>Overriding default / old cost values in litellm</li>
+<li>Local models that you want to track "costs" for, to compare to other results</li>
+</ul>
+<p>This file will override entries in the <a href="https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json">litellm community model cost file</a>.</p>
+<p>Create a JSON file with your model's cost information following the litellm model registry format:</p>
+<div class="highlight"><span class="filename">my_model_registry.json</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"ollama/llama2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"max_tokens"</span><span class="p">:</span><span class="w"> </span><span class="mi">8192</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"input_cost_per_token"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00002</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"output_cost_per_token"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00006</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"litellm_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ollama"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chat"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"my-custom-provider/my-new-model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"max_tokens"</span><span class="p">:</span><span class="w"> </span><span class="mi">8192</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"max_input_tokens"</span><span class="p">:</span><span class="w"> </span><span class="mi">8192</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"max_output_tokens"</span><span class="p">:</span><span class="w"> </span><span class="mi">8192</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"input_cost_per_token"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000001</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"output_cost_per_token"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000002</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"litellm_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"openai"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chat"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Then specify this registry in your config:</p>
+<div class="highlight"><span class="filename">config/your_config.yaml</span><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">model</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">litellm_model_registry</span><span class="p">:</span><span class="w"> </span><span class="s">"my_model_registry.json"</span><span class="w">  </span><span class="c1"># Path to your custom registry</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+<p>If you need to modify the tokenizer that is used when calculating costs, you can set the <code>custom_tokenizer</code> setting in the <a href="../../reference/model_config/">model config</a>.</p>
 <h2 id="models-for-testing">Models for testing</h2>
 <p>We also provide models for testing SWE-agent without spending any credits</p>
 <ul>
@@ -2777,7 +2891,27 @@ Every thread (i.e., every parallel running agent that is working on one task ins
 <li><code>ReplayModel</code> takes a trajectory as input and "replays it"</li>
 <li><code>InstantEmptySubmitTestModel</code> will create an empty <code>reproduce.py</code> and then submit</li>
 </ul>
-<p>% include-markdown "../_footer.md" %}</p>
+<div class="grid cards">
+  <a href="https://github.com/SWE-agent/SWE-agent/issues/new" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">bug_report</span>
+        <span class="nav-card-title">Something broken/unclear?</span>
+      </div>
+      <p class="nav-card-description">Open an issue on GitHub!</p>
+    </div>
+  </a>
+
+  <a href="https://swe-bench.slack.com" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">help</span>
+        <span class="nav-card-title">Open-ended discussions</span>
+      </div>
+      <p class="nav-card-description">Join our Slack!</p>
+    </div>
+  </a>
+</div>
 
 
 
@@ -2795,8 +2929,87 @@ Every thread (i.e., every parallel running agent that is working on one task ins
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -2908,4 +3121,4 @@ Every thread (i.e., every parallel running agent that is working on one task ins
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

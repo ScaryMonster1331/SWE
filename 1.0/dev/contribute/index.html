@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -739,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -937,6 +943,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -2732,7 +2766,7 @@ pre-commit<span class="w"> </span>install
 <p class="admonition-title">Autofixes</p>
 <p>Most problems (including formatting) will be automatically fixed.
 Therefore, if <code>pre-commit</code>/<code>git commit</code> fails on its first run, simply try running it a second time.</p>
-<p>Some more autofixes can be enabled with the <code>--unsafe-fixes</code> option from <a href="https://github.com/charliermarsh/ruff"><code>ruff</code></a>:</p>
+<p>Some more autofixes can be enabled with the <code>--unsafe-fixes</code> option from <a href="https://github.com/astral-sh/ruff"><code>ruff</code></a>:</p>
 <div class="highlight"><pre><span></span><code>pipx<span class="w"> </span>run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>--unsafe-fixes
 </code></pre></div>
 </div>
@@ -2800,6 +2834,10 @@ Run them with</p>
 <li>Note the <code>--</code> before the options passed to sweagent. This is to separate
   options passed to <code>pdb</code> from those that are passed to <code>sweagent</code>.</li>
 </ol>
+<p>When working on a test that fails, you can use</p>
+<div class="highlight"><pre><span></span><code>pytest -k name_of_test -s --capture=no --log-cli-level=DEBUG
+</code></pre></div>
+<p>to see all debug output from the agent.</p>
 <h2 id="tips-for-pull-requests">Tips for pull requests</h2>
 <ul>
 <li>If you see a lot of formatting-related merge conflicts, please see <a href="../formatting_conflicts/">here</a>.</li>
@@ -2810,7 +2848,7 @@ Run them with</p>
   However, if you make the behavior optional without complicating SWE-agent (for example by providing new <a href="../../config/tools/">commands</a>),
   we might be less strict.</li>
 <li>Please add simple unit tests or integration tests wherever possible. Take a look in the <a href="https://github.com/SWE-agent/SWE-agent/tree/main/tests">tests directory</a>
-  for inspiration. We emphasize simple easy-tow-rite tests that get a lot of coverage.</li>
+  for inspiration. We emphasize simple easy-to-write tests that get a lot of coverage.</li>
 </ul>
 <h2 id="building-the-documentation">Building the documentation <a name="mkdocs"></a></h2>
 <p>Simply run</p>
@@ -2820,26 +2858,36 @@ mkdocs<span class="w"> </span>serve
 <p>and point your browser to port 8000 or click one of the links in the output.</p>
 <h2 id="diving-into-the-code">Diving into the code</h2>
 <div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> <strong>Code structure and reference</strong></p>
-<hr>
-<p>Read the reference for more information on our code.</p>
-<p><a href="../../reference/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Read more</a></p>
-</li>
-</ul>
+  <a href="../reference/" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">settings</span>
+        <span class="nav-card-title">Code structure and reference</span>
+      </div>
+      <p class="nav-card-description">Read the reference for more information on our code.</p>
+    </div>
+  </a>
 </div>
 <div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12h-4v-2h4m0 6h-4v-2h4m6-6h-2.81a6 6 0 0 0-1.82-1.96L17 4.41 15.59 3l-2.17 2.17a6 6 0 0 0-2.83 0L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20z"></path></svg></span> <strong>Something broken?</strong>
-    <a href="https://github.com/SWE-agent/SWE-agent/issues/new?template=bug_report.yml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Report bug</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 19h3v3h-3zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6"></path></svg></span> <strong>Something unclear?</strong>
-    <a href="https://github.com/SWE-agent/SWE-agent/issues/new?template=question.yml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ask question</a></p>
-</li>
-</ul>
+  <a href="https://github.com/SWE-agent/SWE-agent/issues/new" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">bug_report</span>
+        <span class="nav-card-title">Something broken/unclear?</span>
+      </div>
+      <p class="nav-card-description">Open an issue on GitHub!</p>
+    </div>
+  </a>
+
+  <a href="https://swe-bench.slack.com" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">help</span>
+        <span class="nav-card-title">Open-ended discussions</span>
+      </div>
+      <p class="nav-card-description">Join our Slack!</p>
+    </div>
+  </a>
 </div>
 
 
@@ -2858,8 +2906,87 @@ mkdocs<span class="w"> </span>serve
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -2971,4 +3098,4 @@ mkdocs<span class="w"> </span>serve
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

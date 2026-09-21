@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -739,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -937,6 +943,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -2034,17 +2068,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.PreExistingRepoConfig.base_commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.PreExistingRepoConfig.repo_name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2056,10 +2079,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.PreExistingRepoConfig.base_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.PreExistingRepoConfig.type" class="md-nav__link">
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.PreExistingRepoConfig.reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;reset
       
     </span>
   </a>
@@ -2106,17 +2151,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.LocalRepoConfig.base_commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.LocalRepoConfig.path" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2128,10 +2162,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.LocalRepoConfig.repo_name" class="md-nav__link">
+  <a href="#sweagent.environment.repo.LocalRepoConfig.base_commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo_name
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
       
     </span>
   </a>
@@ -2143,6 +2177,17 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.LocalRepoConfig.repo_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo_name
       
     </span>
   </a>
@@ -2200,6 +2245,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.GithubRepoConfig.github_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;github_url
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.GithubRepoConfig.base_commit" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2222,10 +2278,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.GithubRepoConfig.github_url" class="md-nav__link">
+  <a href="#sweagent.environment.repo.GithubRepoConfig.type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;github_url
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
       
     </span>
   </a>
@@ -2237,17 +2293,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo_name
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.GithubRepoConfig.type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
       
     </span>
   </a>
@@ -2829,17 +2874,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.PreExistingRepoConfig.base_commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.PreExistingRepoConfig.repo_name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2851,10 +2885,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.PreExistingRepoConfig.base_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.PreExistingRepoConfig.type" class="md-nav__link">
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.PreExistingRepoConfig.reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;reset
       
     </span>
   </a>
@@ -2901,17 +2957,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.LocalRepoConfig.base_commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.LocalRepoConfig.path" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2923,10 +2968,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.LocalRepoConfig.repo_name" class="md-nav__link">
+  <a href="#sweagent.environment.repo.LocalRepoConfig.base_commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo_name
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;base_commit
       
     </span>
   </a>
@@ -2938,6 +2983,17 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.LocalRepoConfig.repo_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo_name
       
     </span>
   </a>
@@ -2995,6 +3051,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.GithubRepoConfig.github_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;github_url
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.environment.repo.GithubRepoConfig.base_commit" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3017,10 +3084,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.GithubRepoConfig.github_url" class="md-nav__link">
+  <a href="#sweagent.environment.repo.GithubRepoConfig.type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;github_url
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
       
     </span>
   </a>
@@ -3032,17 +3099,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;repo_name
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.environment.repo.GithubRepoConfig.type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
       
     </span>
   </a>
@@ -3190,6 +3246,15 @@ This is important because we need to cd to the repo before running the agent.</p
    (sweagent.environment.repo.PreExistingRepoConfig.type)" href="#sweagent.environment.repo.PreExistingRepoConfig.type">type</a></code>
                 (<code><span title="typing.Literal">Literal</span>['preexisting']</code>)
             </li>
+            <li>
+              <code><a class="autorefs autorefs-internal" title="            reset
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.PreExistingRepoConfig.reset)" href="#sweagent.environment.repo.PreExistingRepoConfig.reset">reset</a></code>
+                (<code><span title="bool">bool</span></code>)
+            </li>
         </ul>
 
 
@@ -3202,6 +3267,30 @@ This is important because we need to cd to the repo before running the agent.</p
 
 
 
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.environment.repo.PreExistingRepoConfig.repo_name" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">repo_name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The repo name (the repository must be located at the root of the deployment).</p>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-attribute">
 
@@ -3234,30 +3323,6 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 
-<h3 id="sweagent.environment.repo.PreExistingRepoConfig.repo_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">repo_name</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>The repo name (the repository must be located at the root of the deployment).</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h3 id="sweagent.environment.repo.PreExistingRepoConfig.type" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
 
@@ -3273,6 +3338,30 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     <div class="doc doc-contents ">
 
         <p>Discriminator for (de)serialization/CLI. Do not change.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.environment.repo.PreExistingRepoConfig.reset" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">reset</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">reset</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>If True, reset the repository to the base commit after the copy operation.</p>
 
     </div>
 
@@ -3299,9 +3388,9 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Does nothing."""</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></tbody></table></div>
@@ -3328,11 +3417,15 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Issued after the copy operation or when the environment is reset."""</span>
-    <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[]</span>
 </code></pre></div></td></tr></tbody></table></div>
             </details>
     </div>
@@ -3416,33 +3509,6 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 
-<h3 id="sweagent.environment.repo.LocalRepoConfig.base_commit" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">base_commit</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">'HEAD'</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>The commit to reset the repository to. The default is HEAD,
-i.e., the latest commit. You can also set this to a branch name (e.g., <code>dev</code>),
-a tag (e.g., <code>v0.1.0</code>), or a commit hash (e.g., <code>a4464baca1f</code>).
-SWE-agent will then start from this commit when trying to solve the problem.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h3 id="sweagent.environment.repo.LocalRepoConfig.path" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">path</span>
 
@@ -3465,21 +3531,24 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 
-<h3 id="sweagent.environment.repo.LocalRepoConfig.repo_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">repo_name</span>
+<h3 id="sweagent.environment.repo.LocalRepoConfig.base_commit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">base_commit</span>
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">'HEAD'</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Set automatically based on the repository name. Cannot be set.</p>
+        <p>The commit to reset the repository to. The default is HEAD,
+i.e., the latest commit. You can also set this to a branch name (e.g., <code>dev</code>),
+a tag (e.g., <code>v0.1.0</code>), or a commit hash (e.g., <code>a4464baca1f</code>).
+SWE-agent will then start from this commit when trying to solve the problem.</p>
 
     </div>
 
@@ -3509,6 +3578,30 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 </div>
 
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.environment.repo.LocalRepoConfig.repo_name" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">repo_name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Set automatically based on the repository name. Cannot be set.</p>
+
+    </div>
+
+</div>
+
 
 
 
@@ -3528,16 +3621,16 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span>
-<span class="normal">97</span>
-<span class="normal">98</span>
-<span class="normal">99</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">check_valid_repo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">check_valid_repo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">repo</span> <span class="o">=</span> <span class="n">GitRepo</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">search_parent_directories</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">except</span> <span class="n">InvalidGitRepositoryError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -3569,20 +3662,24 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">check_valid_repo</span><span class="p">()</span>
     <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
         <span class="n">deployment</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">UploadRequest</span><span class="p">(</span><span class="n">source_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">),</span> <span class="n">target_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">repo_name</span><span class="si">}</span><span class="s2">"</span><span class="p">))</span>
     <span class="p">)</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">deployment</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Command</span><span class="p">(</span><span class="n">command</span><span class="o">=</span><span class="sa">f</span><span class="s2">"chown -R root:root </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">repo_name</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)))</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">deployment</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Command</span><span class="p">(</span><span class="n">command</span><span class="o">=</span><span class="sa">f</span><span class="s2">"chown -R root:root /</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">repo_name</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+    <span class="p">)</span>
     <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Failed to change permissions on copied repository (exit code: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">exit_code</span><span class="si">}</span><span class="s2">, stdout: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">stdout</span><span class="si">}</span><span class="s2">, stderr: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">stderr</span><span class="si">}</span><span class="s2">)"</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -3610,9 +3707,9 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Issued after the copy operation or when the environment is reset."""</span>
     <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
@@ -3707,6 +3804,28 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 
+<h3 id="sweagent.environment.repo.GithubRepoConfig.github_url" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">github_url</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">github_url</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h3 id="sweagent.environment.repo.GithubRepoConfig.base_commit" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">base_commit</span>
 
@@ -3758,8 +3877,8 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 
-<h3 id="sweagent.environment.repo.GithubRepoConfig.github_url" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">github_url</span>
+<h3 id="sweagent.environment.repo.GithubRepoConfig.type" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
 
 
   <span class="doc doc-labels">
@@ -3767,10 +3886,12 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">github_url</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">'github'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'github'</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>Discriminator for (de)serialization/CLI. Do not change.</p>
 
     </div>
 
@@ -3798,30 +3919,6 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 </div>
 
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.environment.repo.GithubRepoConfig.type" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">'github'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'github'</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Discriminator for (de)serialization/CLI. Do not change.</p>
-
-    </div>
-
-</div>
-
 
 
 
@@ -3843,17 +3940,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">163</span>
 <span class="normal">164</span>
 <span class="normal">165</span>
 <span class="normal">166</span>
@@ -3867,7 +3954,17 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 <span class="normal">174</span>
 <span class="normal">175</span>
 <span class="normal">176</span>
-<span class="normal">177</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Clones the repository to the sandbox."""</span>
     <span class="n">base_commit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span>
     <span class="n">github_token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"GITHUB_TOKEN"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
@@ -3880,8 +3977,8 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
                         <span class="sa">f</span><span class="s2">"mkdir /</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">repo_name</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
                         <span class="sa">f</span><span class="s2">"cd /</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">repo_name</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
                         <span class="s2">"git init"</span><span class="p">,</span>
-                        <span class="sa">f</span><span class="s2">"git remote add origin </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
-                        <span class="sa">f</span><span class="s2">"git fetch --depth 1 origin </span><span class="si">{</span><span class="n">base_commit</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">"git remote add origin </span><span class="si">{</span><span class="n">shlex</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+                        <span class="sa">f</span><span class="s2">"git fetch --depth 1 origin </span><span class="si">{</span><span class="n">shlex</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">base_commit</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
                         <span class="s2">"git checkout FETCH_HEAD"</span><span class="p">,</span>
                         <span class="s2">"cd .."</span><span class="p">,</span>
                     <span class="p">)</span>
@@ -3916,9 +4013,9 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">"""Issued after the copy operation or when the environment is reset."""</span>
     <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
@@ -4001,29 +4098,29 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">repo_from_simplified_input</span><span class="p">(</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">repo_from_simplified_input</span><span class="p">(</span>
     <span class="o">*</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">base_commit</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"HEAD"</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"local"</span><span class="p">,</span> <span class="s2">"github"</span><span class="p">,</span> <span class="s2">"preexisting"</span><span class="p">,</span> <span class="s2">"auto"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"auto"</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RepoConfig</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Get repo config from a simplified input.</span>
@@ -4068,8 +4165,87 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -4181,4 +4357,4 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

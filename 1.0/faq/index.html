@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../assets/custom.css">
     
       <link rel="stylesheet" href="../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -744,6 +748,8 @@
       
         
       
+        
+      
     
     
     
@@ -962,6 +968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../usage/whats_next/" class="md-nav__link">
         
   
@@ -1007,6 +1041,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1023,6 +1075,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-swe-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring SWE-agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MISC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anything-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anything else?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2500,6 +2626,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-swe-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring SWE-agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MISC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anything-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anything else?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2525,27 +2714,7 @@
 
 
 <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
-<blockquote>
-<p>What models are supported?</p>
-</blockquote>
-<p>Probably all of them! There's even a few for testing. See <a href="../installation/keys/">models</a>.</p>
-<blockquote>
-<p>What can I do if my model doesn't support function calling?</p>
-</blockquote>
-<p>You can configure how to parse the model's response by choosing your <code>agent.tools.parse_function</code>.
-The default now is <code>function_calling</code>, but you can change it to <code>thought_action</code>.
-More information in the <a href="../reference/parsers/">reference</a>.
-There are also some config example in our <a href="https://github.com/SWE-agent/SWE-agent/tree/main/config">config folder</a>.</p>
-<blockquote>
-<p>What's up with all the output files?</p>
-</blockquote>
-<p>You're probably most interested in the <code>*.traj</code> files, which contain complete records of SWE-agent's thought process and actions. See <a href="../usage/trajectories/">output files</a> for more information.</p>
-<blockquote>
-<p>How can I change the demonstrations given to SWE-agent?</p>
-</blockquote>
-<p>At the start of each run, we feed the agent a demonstration trajectory, showing it how to solve an example issue.
-This substantially improves the agent's abilities to solve novel issues.
-If you'd like to modify or totally change this demonstration, to better fit your use case, see <a href="../config/demonstrations/">this</a>.</p>
+<h2 id="basics">Basics</h2>
 <blockquote>
 <p>Does SWE-agent run on Windows/MacOS/Linux?</p>
 </blockquote>
@@ -2557,17 +2726,67 @@ But you can always execute SWE-agent in the cloud.</p>
 <p>This is probably because of union types.
 See <a href="../usage/cl_tutorial/#union-types">this section</a> for more information, but the short version is that some options (e.g., the repository or problem statement) can be specified in multiple ways, so we try every option until we find the one that works based on your inputs.
 If none of them work, we throw an error which then tells you why we cannot initialize any of the types, so this will get somewhat long and confusing.</p>
+<blockquote>
+<p>Why are my images not being processed?</p>
+</blockquote>
+<p>Check that you're using a multimodal configuration (see <code>default_mm_with_images.yaml</code> as an example), have internet connectivity, and images are under 10MB. See <a href="../usage/multimodal/">Multimodal usage notes</a> for more details.</p>
+<h2 id="models">Models</h2>
+<blockquote>
+<p>What models are supported? Do you support local models?</p>
+</blockquote>
+<p>Probably all of them, including local models! There's even a few for testing. See <a href="../installation/keys/">models</a> and <a href="../config/models/">more on models</a>.</p>
+<blockquote>
+<p>Does SWE-agent support multimodal models and images?</p>
+</blockquote>
+<p>Yes! SWE-agent supports vision-capable models that can process images from GitHub issues. Use <code>--config config/default_mm_with_images.yaml</code> and specify a multimodal model like Claude Sonnet 4 or GPT-4o. See the <a href="../usage/multimodal/">multimodal guide</a> for details.</p>
+<blockquote>
+<p>What can I do if my model doesn't support function calling?</p>
+</blockquote>
+<p>You can configure how to parse the model's response by choosing your <code>agent.tools.parse_function</code>.
+The default now is <code>function_calling</code>, but you can change it to <code>thought_action</code>.
+More information in the <a href="../reference/parsers/">reference</a>.
+There are also some config example in our <a href="https://github.com/SWE-agent/SWE-agent/tree/main/config">config folder</a>.</p>
+<h2 id="configuring-swe-agent">Configuring SWE-agent</h2>
+<blockquote>
+<p>How can I change the demonstrations given to SWE-agent?</p>
+</blockquote>
+<p>At the start of each run, we feed the agent a demonstration trajectory, showing it how to solve an example issue.
+This substantially improves the agent's abilities to solve novel issues.
+If you'd like to modify or totally change this demonstration, to better fit your use case, see <a href="../config/demonstrations/">this</a>.</p>
+<blockquote>
+<p>Can I add custom tools?</p>
+</blockquote>
+<p>Yes! Take a look at <a href="../usage/adding_custom_tools/">this tutorial</a>.</p>
+<h2 id="misc">MISC</h2>
+<blockquote>
+<p>What's up with all the output files?</p>
+</blockquote>
+<p>You're probably most interested in the <code>*.traj</code> files, which contain complete records of SWE-agent's thought process and actions. See <a href="../usage/trajectories/">output files</a> for more information.</p>
+<h2 id="anything-else">Anything else?</h2>
+<blockquote>
+<p>I have a question/bug report/feature request...</p>
+</blockquote>
+<p>Please open a <a href="https://github.com/SWE-agent/SWE-agent/issues">github issue!</a>!</p>
 <div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12h-4v-2h4m0 6h-4v-2h4m6-6h-2.81a6 6 0 0 0-1.82-1.96L17 4.41 15.59 3l-2.17 2.17a6 6 0 0 0-2.83 0L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20z"></path></svg></span> <strong>Something broken?</strong>
-    <a href="https://github.com/SWE-agent/SWE-agent/issues/new?template=bug_report.yml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Report bug</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 19h3v3h-3zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6"></path></svg></span> <strong>Something unclear?</strong>
-    <a href="https://github.com/SWE-agent/SWE-agent/issues/new?template=question.yml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ask question</a></p>
-</li>
-</ul>
+  <a href="https://github.com/SWE-agent/SWE-agent/issues/new" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">bug_report</span>
+        <span class="nav-card-title">Something broken/unclear?</span>
+      </div>
+      <p class="nav-card-description">Open an issue on GitHub!</p>
+    </div>
+  </a>
+
+  <a href="https://swe-bench.slack.com" class="nav-card-link">
+    <div class="nav-card">
+      <div class="nav-card-header">
+        <span class="material-icons nav-card-icon">help</span>
+        <span class="nav-card-title">Open-ended discussions</span>
+      </div>
+      <p class="nav-card-description">Join our Slack!</p>
+    </div>
+  </a>
 </div>
 
 
@@ -2586,8 +2805,87 @@ If none of them work, we throw an error which then tells you why we cannot initi
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -2699,4 +2997,4 @@ If none of them work, we throw an error which then tells you why we cannot initi
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

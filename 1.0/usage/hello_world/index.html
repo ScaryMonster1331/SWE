@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -746,6 +750,8 @@
       
         
       
+        
+      
     
     
     
@@ -954,6 +960,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -2528,13 +2562,18 @@
 
 <h1 id="hello-world">Hello world</h1>
 <div class="admonition abstract">
-<p class="admonition-title">Fix a github issue with SWE-agent</p>
-<p>In this tutorial, we will fix a github issue with SWE-agent using the command line interface.</p>
+<p class="admonition-title">Fix a GitHub issue with SWE-agent</p>
+<p>In this tutorial, we will fix a GitHub issue with SWE-agent using the command line interface.</p>
 <ul>
 <li>Make sure you have <a href="../../installation/">installed</a> SWE-agent and have a <a href="../../installation/keys/">language model</a> set up.</li>
 <li>We will be executing code in a Docker sandbox, so make sure you have docker installed (<a href="../../installation/tips/">docker troubleshooting</a>).
   If you cannot run docker, skim this tutorial and see how you can run SWE-agent with cloud-based execution in the <a href="../cl_tutorial/">command line basics tutorial</a>.</li>
 </ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Mini-SWE-Agent</p>
+<p>Looking for a simple, no-fuzz version of SWE-agent that can also help you in your daily work?
+Check out <a href="https://mini-swe-agent.com/">Mini-SWE-Agent</a>!</p>
 </div>
 <p>After installing SWE-agent, you have the <code>sweagent</code> command available. Run <code>sweagent --help</code> to see the list of subcommands.
 The most important ones are</p>
@@ -2546,12 +2585,12 @@ The most important ones are</p>
 <p>In this tutorial, we will focus on the <code>run</code> subcommand.</p>
 <p>Let's start with an absolutely trivial example and solve an issue about a simple syntax error (<a href="https://github.com/SWE-agent/test-repo/issues/1"><code>swe-agent/test-repo #1</code></a>)</p>
 <div class="highlight"><pre><span></span><code>sweagent<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--agent.model.name<span class="o">=</span>claude-3-7-sonnet-latest<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--agent.model.name<span class="o">=</span>claude-sonnet-4-20250514<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--agent.model.per_instance_cost_limit<span class="o">=</span><span class="m">2</span>.00<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--env.repo.github_url<span class="o">=</span>https://github.com/SWE-agent/test-repo<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--problem_statement.github_url<span class="o">=</span>https://github.com/SWE-agent/test-repo/issues/1
 </code></pre></div>
-<p>The example above uses the <code>Claude 3.5 Sonnet</code> model from Anthropic. Alternatively, you can for example use <code>GPT-4o</code> (from OpenAI)
+<p>The example above uses the <code>Claude Sonnet 4</code> model from Anthropic. Alternatively, you can for example use <code>GPT-4o</code> (from OpenAI)
 by setting <code>--agent.model.name=gpt-4o</code>.
 In order to use it, you need to add your keys to the environment:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>&lt;your<span class="w"> </span>key&gt;
@@ -3278,8 +3317,87 @@ In order to use it, you need to add your keys to the environment:</p>
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -3391,4 +3509,4 @@ In order to use it, you need to add your keys to the environment:</p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

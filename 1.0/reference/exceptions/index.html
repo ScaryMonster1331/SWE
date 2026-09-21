@@ -54,6 +54,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -123,7 +127,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -737,6 +741,8 @@
       
         
       
+        
+      
     
     
     
@@ -935,6 +941,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -2506,13 +2540,52 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.ContentPolicyViolationError" class="md-nav__link">
+  <a href="#sweagent.exceptions.FormatError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ContentPolicyViolationError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FormatError
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.FunctionCallingFormatError" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FunctionCallingFormatError
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="&nbsp;FunctionCallingFormatError">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.FunctionCallingFormatError.message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.FunctionCallingFormatError.extra_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;extra_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2539,10 +2612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FormatError" class="md-nav__link">
+  <a href="#sweagent.exceptions.InstanceCostLimitExceededError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FormatError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;InstanceCostLimitExceededError
       
     </span>
   </a>
@@ -2550,41 +2623,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FunctionCallingFormatError" class="md-nav__link">
+  <a href="#sweagent.exceptions.TotalCostLimitExceededError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FunctionCallingFormatError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;TotalCostLimitExceededError
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="&nbsp;FunctionCallingFormatError">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FunctionCallingFormatError.extra_info" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;extra_info
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FunctionCallingFormatError.message" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;message
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2600,10 +2645,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.InstanceCostLimitExceededError" class="md-nav__link">
+  <a href="#sweagent.exceptions.ContentPolicyViolationError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;InstanceCostLimitExceededError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ContentPolicyViolationError
       
     </span>
   </a>
@@ -2615,17 +2660,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ModelConfigurationError
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.exceptions.TotalCostLimitExceededError" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;TotalCostLimitExceededError
       
     </span>
   </a>
@@ -2700,13 +2734,52 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.ContentPolicyViolationError" class="md-nav__link">
+  <a href="#sweagent.exceptions.FormatError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ContentPolicyViolationError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FormatError
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.FunctionCallingFormatError" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FunctionCallingFormatError
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="&nbsp;FunctionCallingFormatError">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.FunctionCallingFormatError.message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.exceptions.FunctionCallingFormatError.extra_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;extra_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2733,10 +2806,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FormatError" class="md-nav__link">
+  <a href="#sweagent.exceptions.InstanceCostLimitExceededError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FormatError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;InstanceCostLimitExceededError
       
     </span>
   </a>
@@ -2744,41 +2817,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FunctionCallingFormatError" class="md-nav__link">
+  <a href="#sweagent.exceptions.TotalCostLimitExceededError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FunctionCallingFormatError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;TotalCostLimitExceededError
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="&nbsp;FunctionCallingFormatError">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FunctionCallingFormatError.extra_info" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;extra_info
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.exceptions.FunctionCallingFormatError.message" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;message
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2794,10 +2839,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.exceptions.InstanceCostLimitExceededError" class="md-nav__link">
+  <a href="#sweagent.exceptions.ContentPolicyViolationError" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;InstanceCostLimitExceededError
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ContentPolicyViolationError
       
     </span>
   </a>
@@ -2809,17 +2854,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ModelConfigurationError
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.exceptions.TotalCostLimitExceededError" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;TotalCostLimitExceededError
       
     </span>
   </a>
@@ -2890,93 +2924,6 @@
 
 
 
-
-<div class="doc doc-object doc-class">
-
-
-
-<h3 id="sweagent.exceptions.ContentPolicyViolationError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ContentPolicyViolationError</span>
-
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-
-
-        <p>Raised when the model response violates a content policy</p>
-
-
-
-
-
-
-
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h3 id="sweagent.exceptions.ContextWindowExceededError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ContextWindowExceededError</span>
-
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-
-
-        <p>Raised when the context window of a LM is exceeded</p>
-
-
-
-
-
-
-
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h3 id="sweagent.exceptions.CostLimitExceededError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">CostLimitExceededError</span>
-
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-
-
-        <p>Raised when we exceed a cost limit</p>
-
-
-
-
-
-
-
-
-
-    </div>
-
-</div>
 
 <div class="doc doc-object doc-class">
 
@@ -3073,8 +3020,8 @@ calling parser.</p>
 
 
 
-<h4 id="sweagent.exceptions.FunctionCallingFormatError.extra_info" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">extra_info</span>
+<h4 id="sweagent.exceptions.FunctionCallingFormatError.message" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">message</span>
 
 
   <span class="doc doc-labels">
@@ -3082,7 +3029,7 @@ calling parser.</p>
   </span>
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">extra_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'error_code'</span><span class="p">:</span> <span class="n"><span title="sweagent.exceptions.FunctionCallingFormatError(error_code)">error_code</span></span><span class="p">,</span> <span class="o">**</span><span class="n"><span title="sweagent.exceptions.FunctionCallingFormatError(extra_info)">extra_info</span></span><span class="p">}</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="n"><span title="sweagent.exceptions.FunctionCallingFormatError(message)">message</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3095,8 +3042,8 @@ calling parser.</p>
 
 
 
-<h4 id="sweagent.exceptions.FunctionCallingFormatError.message" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">message</span>
+<h4 id="sweagent.exceptions.FunctionCallingFormatError.extra_info" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">extra_info</span>
 
 
   <span class="doc doc-labels">
@@ -3104,7 +3051,7 @@ calling parser.</p>
   </span>
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="n"><span title="sweagent.exceptions.FunctionCallingFormatError(message)">message</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">extra_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'error_code'</span><span class="p">:</span> <span class="n"><span title="sweagent.exceptions.FunctionCallingFormatError(error_code)">error_code</span></span><span class="p">,</span> <span class="o">**</span><span class="n"><span title="sweagent.exceptions.FunctionCallingFormatError(extra_info)">extra_info</span></span><span class="p">}</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3128,8 +3075,8 @@ calling parser.</p>
 
 
 
-<h3 id="sweagent.exceptions.InstanceCallLimitExceededError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">InstanceCallLimitExceededError</span>
+<h3 id="sweagent.exceptions.ContextWindowExceededError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ContextWindowExceededError</span>
 
 
 </h3>
@@ -3139,7 +3086,36 @@ calling parser.</p>
 
 
 
-        <p>Raised when we exceed the per instance call limit</p>
+        <p>Raised when the context window of a LM is exceeded</p>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="sweagent.exceptions.CostLimitExceededError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">CostLimitExceededError</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+        <p>Raised when we exceed a cost limit</p>
 
 
 
@@ -3186,8 +3162,8 @@ calling parser.</p>
 
 
 
-<h3 id="sweagent.exceptions.ModelConfigurationError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ModelConfigurationError</span>
+<h3 id="sweagent.exceptions.TotalCostLimitExceededError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">TotalCostLimitExceededError</span>
 
 
 </h3>
@@ -3197,8 +3173,7 @@ calling parser.</p>
 
 
 
-        <p>Raised when the model configuration is invalid/no further retries
-should be made.</p>
+        <p>Raised when we exceed the total cost limit</p>
 
 
 
@@ -3216,8 +3191,8 @@ should be made.</p>
 
 
 
-<h3 id="sweagent.exceptions.TotalCostLimitExceededError" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">TotalCostLimitExceededError</span>
+<h3 id="sweagent.exceptions.InstanceCallLimitExceededError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">InstanceCallLimitExceededError</span>
 
 
 </h3>
@@ -3227,7 +3202,66 @@ should be made.</p>
 
 
 
-        <p>Raised when we exceed the total cost limit</p>
+        <p>Raised when we exceed the per instance call limit</p>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="sweagent.exceptions.ContentPolicyViolationError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ContentPolicyViolationError</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+        <p>Raised when the model response violates a content policy</p>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="sweagent.exceptions.ModelConfigurationError" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ModelConfigurationError</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+        <p>Raised when the model configuration is invalid/no further retries
+should be made.</p>
 
 
 
@@ -3266,8 +3300,87 @@ should be made.</p>
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -3363,4 +3476,4 @@ should be made.</p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -739,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -937,6 +943,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -2302,10 +2336,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.LastNObservations.always_keep_output_for_tags" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.LastNObservations.n" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;always_keep_output_for_tags
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.LastNObservations.polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;polling
       
     </span>
   </a>
@@ -2324,21 +2369,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.LastNObservations.n" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.LastNObservations.always_keep_output_for_tags" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.LastNObservations.polling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;polling
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;always_keep_output_for_tags
       
     </span>
   </a>
@@ -2385,10 +2419,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.TagToolCallObservations.function_names" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.TagToolCallObservations.type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;function_names
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
       
     </span>
   </a>
@@ -2407,10 +2441,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.TagToolCallObservations.type" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.TagToolCallObservations.function_names" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;function_names
       
     </span>
   </a>
@@ -2433,6 +2467,17 @@
   
     <nav class="md-nav" aria-label="&nbsp;CacheControlHistoryProcessor">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.CacheControlHistoryProcessor.type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#sweagent.agent.history_processors.CacheControlHistoryProcessor.last_n_messages" class="md-nav__link">
@@ -2467,17 +2512,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.CacheControlHistoryProcessor.type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2496,10 +2530,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.RemoveRegex.keep_last" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.RemoveRegex.remove" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;keep_last
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;remove
       
     </span>
   </a>
@@ -2507,10 +2541,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.RemoveRegex.remove" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.RemoveRegex.keep_last" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;remove
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;keep_last
       
     </span>
   </a>
@@ -2858,10 +2892,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.LastNObservations.always_keep_output_for_tags" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.LastNObservations.n" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;always_keep_output_for_tags
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.LastNObservations.polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;polling
       
     </span>
   </a>
@@ -2880,21 +2925,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.LastNObservations.n" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.LastNObservations.always_keep_output_for_tags" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.LastNObservations.polling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;polling
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;always_keep_output_for_tags
       
     </span>
   </a>
@@ -2941,10 +2975,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.TagToolCallObservations.function_names" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.TagToolCallObservations.type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;function_names
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
       
     </span>
   </a>
@@ -2963,10 +2997,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.TagToolCallObservations.type" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.TagToolCallObservations.function_names" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;function_names
       
     </span>
   </a>
@@ -2989,6 +3023,17 @@
   
     <nav class="md-nav" aria-label="&nbsp;CacheControlHistoryProcessor">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.CacheControlHistoryProcessor.type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#sweagent.agent.history_processors.CacheControlHistoryProcessor.last_n_messages" class="md-nav__link">
@@ -3023,17 +3068,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.CacheControlHistoryProcessor.type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3052,10 +3086,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.RemoveRegex.keep_last" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.RemoveRegex.remove" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;keep_last
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;remove
       
     </span>
   </a>
@@ -3063,10 +3097,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.agent.history_processors.RemoveRegex.remove" class="md-nav__link">
+  <a href="#sweagent.agent.history_processors.RemoveRegex.keep_last" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;remove
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;keep_last
       
     </span>
   </a>
@@ -3118,6 +3152,12 @@
 <h1 id="history-processor-configuration">History processor configuration</h1>
 <p>History processors can filter the history/trajectory to query the model.
 For example, a very simple history processor would be one that strips away old observations to reduce context when querying the model.</p>
+<p>You can set them as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">history_processors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_n_observations</span>
+<span class="w">      </span><span class="nt">n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
 
 
 <div class="doc doc-object doc-class">
@@ -3223,7 +3263,24 @@ For example, a very simple history processor would be one that strips away old o
             <p class="doc doc-class-bases">
               Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
 
-        <p>Keep the last n observations or remove tagged observations.</p>
+        <p>Elide all but the last n observations or remove tagged observations.</p>
+<p>This is our most classic history processor, used in the original paper
+to elide but the last 5 observations.
+Elided observations are replaced by "Old environment output: (n lines omitted)".</p>
+<p>Typical configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">history_processors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_n_observations</span>
+<span class="w">      </span><span class="nt">n</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
+<p>as for example in use in the SWE-agent 0.7 config at
+<a href="https://github.com/SWE-agent/SWE-agent/blob/main/config/sweagent_0_7/07.yaml">https://github.com/SWE-agent/SWE-agent/blob/main/config/sweagent_0_7/07.yaml</a></p>
+<p>For most use cases, you only need to set <code>n</code>.</p>
+<p>Note that using this history processor will break prompt caching (as the
+history of every query will change every time due to the elided observations).
+There are some workarounds possible with the <code>polling</code> parameter.</p>
+<p>However, most SotA models can now fit a lot of context, so generally this
+history processor is not always needed anymore.</p>
 
     
       <p>Config:</p>
@@ -3312,56 +3369,6 @@ For example, a very simple history processor would be one that strips away old o
 
 
 
-<h3 id="sweagent.agent.history_processors.LastNObservations.always_keep_output_for_tags" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">always_keep_output_for_tags</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">always_keep_output_for_tags</span><span class="p">:</span> <span class="n"><span title="set">set</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'keep_output'</span><span class="p">}</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Any observation with a <code>tags</code> field containing one of these strings will be kept,
-even if it is not one of the last n observations.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.agent.history_processors.LastNObservations.always_remove_output_for_tags" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">always_remove_output_for_tags</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">always_remove_output_for_tags</span><span class="p">:</span> <span class="n"><span title="set">set</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'remove_output'</span><span class="p">}</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Any observation with a <code>tags</code> field containing one of these strings will be elided,
-even if it is one of the last n observations.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h3 id="sweagent.agent.history_processors.LastNObservations.n" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">n</span>
 
@@ -3404,6 +3411,56 @@ even if it is one of the last n observations.</p>
 This is useful for caching, as we want to remove more and more messages, but every
 time we change the history, we need to cache everything again.
 Effectively, we will now keep between <code>n</code> and <code>n+polling</code> observations.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.agent.history_processors.LastNObservations.always_remove_output_for_tags" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">always_remove_output_for_tags</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">always_remove_output_for_tags</span><span class="p">:</span> <span class="n"><span title="set">set</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'remove_output'</span><span class="p">}</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Any observation with a <code>tags</code> field containing one of these strings will be elided,
+even if it is one of the last n observations.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.agent.history_processors.LastNObservations.always_keep_output_for_tags" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">always_keep_output_for_tags</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">always_keep_output_for_tags</span><span class="p">:</span> <span class="n"><span title="set">set</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'keep_output'</span><span class="p">}</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Any observation with a <code>tags</code> field containing one of these strings will be kept,
+even if it is not one of the last n observations.</p>
 
     </div>
 
@@ -3456,12 +3513,12 @@ Effectively, we will now keep between <code>n</code> and <code>n+polling</code> 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>sweagent/agent/history_processors.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@field_validator</span><span class="p">(</span><span class="s2">"n"</span><span class="p">)</span>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@field_validator</span><span class="p">(</span><span class="s2">"n"</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">validate_n</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="s2">"n must be a positive integer"</span>
@@ -3554,8 +3611,8 @@ Effectively, we will now keep between <code>n</code> and <code>n+polling</code> 
 
 
 
-<h3 id="sweagent.agent.history_processors.TagToolCallObservations.function_names" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">function_names</span>
+<h3 id="sweagent.agent.history_processors.TagToolCallObservations.type" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
 
 
   <span class="doc doc-labels">
@@ -3563,12 +3620,12 @@ Effectively, we will now keep between <code>n</code> and <code>n+polling</code> 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">function_names</span><span class="p">:</span> <span class="n"><span title="set">set</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">'tag_tool_call_observations'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'tag_tool_call_observations'</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Only consider observations made by tools with these names.</p>
+        <p>Do not change. Used for (de)serialization.</p>
 
     </div>
 
@@ -3602,8 +3659,8 @@ Effectively, we will now keep between <code>n</code> and <code>n+polling</code> 
 
 
 
-<h3 id="sweagent.agent.history_processors.TagToolCallObservations.type" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
+<h3 id="sweagent.agent.history_processors.TagToolCallObservations.function_names" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">function_names</span>
 
 
   <span class="doc doc-labels">
@@ -3611,12 +3668,12 @@ Effectively, we will now keep between <code>n</code> and <code>n+polling</code> 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">'tag_tool_call_observations'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'tag_tool_call_observations'</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">function_names</span><span class="p">:</span> <span class="n"><span title="set">set</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Do not change. Used for (de)serialization.</p>
+        <p>Only consider observations made by tools with these names.</p>
 
     </div>
 
@@ -3716,6 +3773,30 @@ Use this when running with anthropic claude.</p>
 
 
 
+<h3 id="sweagent.agent.history_processors.CacheControlHistoryProcessor.type" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">'cache_control'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'cache_control'</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Do not change. Used for (de)serialization.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h3 id="sweagent.agent.history_processors.CacheControlHistoryProcessor.last_n_messages" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">last_n_messages</span>
 
@@ -3784,30 +3865,6 @@ we've got the completion and you want to avoid cache mismatch.</p>
     <div class="doc doc-contents ">
 
         <p>Only add cache control to messages with these roles.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.agent.history_processors.CacheControlHistoryProcessor.type" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">'cache_control'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'cache_control'</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Do not change. Used for (de)serialization.</p>
 
     </div>
 
@@ -3897,30 +3954,6 @@ we've got the completion and you want to avoid cache mismatch.</p>
 
 
 
-<h3 id="sweagent.agent.history_processors.RemoveRegex.keep_last" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">keep_last</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">keep_last</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">0</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Keep the last n history items unchanged</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h3 id="sweagent.agent.history_processors.RemoveRegex.remove" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">remove</span>
 
@@ -3936,6 +3969,30 @@ we've got the completion and you want to avoid cache mismatch.</p>
     <div class="doc doc-contents ">
 
         <p>Regex patterns to remove from history items</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.agent.history_processors.RemoveRegex.keep_last" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">keep_last</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">keep_last</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Keep the last n history items unchanged</p>
 
     </div>
 
@@ -3992,8 +4049,87 @@ we've got the completion and you want to avoid cache mismatch.</p>
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -4105,4 +4241,4 @@ we've got the completion and you want to avoid cache mismatch.</p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->

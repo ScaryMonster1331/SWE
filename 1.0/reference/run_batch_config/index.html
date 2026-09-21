@@ -56,6 +56,10 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <link rel="stylesheet" href="../../assets/navigation_cards.css">
+    
       <link rel="stylesheet" href="../../assets/custom.css">
     
       <link rel="stylesheet" href="../../assets/mkdocstrings.css">
@@ -109,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sweagent.run.run_batch.RunBatchConfig" class="md-skip">
+        <a href="#batch-run-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +129,7 @@
               </button>
             
             
-🏆 <a href="https://swesmith.com">SWE-agent-LM-32b</a> achieves open-weights SOTA on SWE-bench!
+📣 We now recommend <a href="https://mini-swe-agent.com">mini-swe-agent</a> instead of SWE-agent: Same performance, much more simple &amp; flexible
 
           </div>
           
@@ -739,6 +743,8 @@
       
         
       
+        
+      
     
     
     
@@ -937,6 +943,34 @@
     
   
     Competitive runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/adding_custom_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding custom tools
   
 
     
@@ -1846,6 +1880,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1888,6 +1924,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1908,28 +1946,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;agent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.env_var_path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;env_var_path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.run.run_batch.RunBatchConfig.instances" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1941,10 +1957,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.num_workers" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;num_workers
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;agent
       
     </span>
   </a>
@@ -1963,10 +1979,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.progress_bar" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.suffix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;progress_bar
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;suffix
       
     </span>
   </a>
@@ -1985,17 +2001,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.random_delay_multiplier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;random_delay_multiplier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.run.run_batch.RunBatchConfig.redo_existing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2007,10 +2012,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.suffix" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.env_var_path" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;suffix
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;env_var_path
       
     </span>
   </a>
@@ -2018,10 +2023,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.evaluate_and_redo_existing" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.num_workers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;evaluate_and_redo_existing
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;num_workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.random_delay_multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;random_delay_multiplier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.progress_bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;progress_bar
       
     </span>
   </a>
@@ -2033,6 +2060,17 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;set_default_output_dir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.evaluate_and_redo_existing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;evaluate_and_redo_existing
       
     </span>
   </a>
@@ -2681,6 +2719,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2701,28 +2741,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;agent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.env_var_path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;env_var_path
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.run.run_batch.RunBatchConfig.instances" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2734,10 +2752,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.num_workers" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;num_workers
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;agent
       
     </span>
   </a>
@@ -2756,10 +2774,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.progress_bar" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.suffix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;progress_bar
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;suffix
       
     </span>
   </a>
@@ -2778,17 +2796,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.random_delay_multiplier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;random_delay_multiplier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sweagent.run.run_batch.RunBatchConfig.redo_existing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2800,10 +2807,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.suffix" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.env_var_path" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;suffix
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;env_var_path
       
     </span>
   </a>
@@ -2811,10 +2818,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sweagent.run.run_batch.RunBatchConfig.evaluate_and_redo_existing" class="md-nav__link">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.num_workers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;evaluate_and_redo_existing
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;num_workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.random_delay_multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;random_delay_multiplier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.progress_bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;progress_bar
       
     </span>
   </a>
@@ -2826,6 +2855,17 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;set_default_output_dir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.run.run_batch.RunBatchConfig.evaluate_and_redo_existing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;evaluate_and_redo_existing
       
     </span>
   </a>
@@ -2863,7 +2903,9 @@
   
 
 
-  <h1>Run batch</h1>
+<h1 id="batch-run-configuration">Batch run configuration</h1>
+<p>This page documents the configuration options for running SWE-agent in batch mode on multiple problems.</p>
+
 
 <div class="doc doc-object doc-class">
 
@@ -2904,6 +2946,34 @@
 
 
 
+<h3 id="sweagent.run.run_batch.RunBatchConfig.instances" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">instances</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">instances</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="            BatchInstanceSourceConfig
+
+
+  
+      module-attribute
+   (sweagent.run.batch_instances.BatchInstanceSourceConfig)" href="../batch_instances/#sweagent.run.batch_instances.BatchInstanceSourceConfig">BatchInstanceSourceConfig</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n"><span title="pydantic.Field(description)">description</span></span><span class="o">=</span><span class="s1">'Instances to run.'</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h3 id="sweagent.run.run_batch.RunBatchConfig.agent" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">agent</span>
 
@@ -2918,6 +2988,104 @@
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.run.run_batch.RunBatchConfig.output_dir" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">output_dir</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">output_dir</span><span class="p">:</span> <span class="n"><span title="pathlib.Path">Path</span></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n"><span title="pydantic.Field(default)">default</span></span><span class="o">=</span><span class="n"><span title="pathlib.Path">Path</span></span><span class="p">(</span><span class="s1">'DEFAULT'</span><span class="p">),</span> <span class="n"><span title="pydantic.Field(description)">description</span></span><span class="o">=</span><span class="s1">'Output directory.'</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.run.run_batch.RunBatchConfig.suffix" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">suffix</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">suffix</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">''</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Suffix to add to the output directory. Only used if <code>output_dir</code> is <code>DEFAULT</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.run.run_batch.RunBatchConfig.raise_exceptions" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">raise_exceptions</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">raise_exceptions</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Raise exceptions instead of skipping instances.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.run.run_batch.RunBatchConfig.redo_existing" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">redo_existing</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">redo_existing</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Do not skip instances that already have a trajectory.</p>
 
     </div>
 
@@ -2952,34 +3120,6 @@
 
 
 
-<h3 id="sweagent.run.run_batch.RunBatchConfig.instances" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">instances</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">instances</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="            BatchInstanceSourceConfig
-
-
-  
-      module-attribute
-   (sweagent.run.batch_instances.BatchInstanceSourceConfig)" href="../batch_instances/#sweagent.run.batch_instances.BatchInstanceSourceConfig">BatchInstanceSourceConfig</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n"><span title="pydantic.Field(description)">description</span></span><span class="o">=</span><span class="s1">'Instances to run.'</span><span class="p">)</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h3 id="sweagent.run.run_batch.RunBatchConfig.num_workers" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">num_workers</span>
 
@@ -2996,80 +3136,6 @@
     <div class="doc doc-contents ">
 
         <p>Number of parallel workers to use.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.run.run_batch.RunBatchConfig.output_dir" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">output_dir</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">output_dir</span><span class="p">:</span> <span class="n"><span title="pathlib.Path">Path</span></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n"><span title="pydantic.Field(default)">default</span></span><span class="o">=</span><span class="n"><span title="pathlib.Path">Path</span></span><span class="p">(</span><span class="s1">'DEFAULT'</span><span class="p">),</span> <span class="n"><span title="pydantic.Field(description)">description</span></span><span class="o">=</span><span class="s1">'Output directory.'</span><span class="p">)</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.run.run_batch.RunBatchConfig.progress_bar" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">progress_bar</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">progress_bar</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Whether to show a progress bar. Progress bar is never shown for human models.
-Progress bar is always shown for multi-worker runs.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.run.run_batch.RunBatchConfig.raise_exceptions" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">raise_exceptions</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">raise_exceptions</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Raise exceptions instead of skipping instances.</p>
 
     </div>
 
@@ -3107,8 +3173,8 @@ with few CPUs that cannot handle the startup of all containers in time.</p>
 
 
 
-<h3 id="sweagent.run.run_batch.RunBatchConfig.redo_existing" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">redo_existing</span>
+<h3 id="sweagent.run.run_batch.RunBatchConfig.progress_bar" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">progress_bar</span>
 
 
   <span class="doc doc-labels">
@@ -3117,37 +3183,13 @@ with few CPUs that cannot handle the startup of all containers in time.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">redo_existing</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">progress_bar</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Do not skip instances that already have a trajectory.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="sweagent.run.run_batch.RunBatchConfig.suffix" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">suffix</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">suffix</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">''</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Suffix to add to the output directory. Only used if <code>output_dir</code> is <code>DEFAULT</code>.</p>
+        <p>Whether to show a progress bar. Progress bar is never shown for human models.
+Progress bar is always shown for multi-worker runs.</p>
 
     </div>
 
@@ -3155,51 +3197,6 @@ with few CPUs that cannot handle the startup of all containers in time.</p>
 
 
 
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="sweagent.run.run_batch.RunBatchConfig.evaluate_and_redo_existing" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">evaluate_and_redo_existing</span>
-
-
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">evaluate_and_redo_existing</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.Self">Self</span></span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-
-            <details class="mkdocstrings-source">
-              <summary>Source code in <code>sweagent/run/run_batch.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">"after"</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_and_redo_existing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">instances</span><span class="p">,</span> <span class="n">SWEBenchInstances</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">instances</span><span class="o">.</span><span class="n">evaluate</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">redo_existing</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="s2">"Cannot evaluate and redo existing at the same time. This would cause invalid results, because "</span>
-            <span class="s2">"after the first merge_preds gives you a preds.json, this file would be submitted to SB-CLI, causing"</span>
-            <span class="s2">"evaluation of old instances, which could then not be overwritten by the new ones."</span>
-        <span class="p">)</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="k">return</span> <span class="bp">self</span>
-</code></pre></div></td></tr></tbody></table></div>
-            </details>
-    </div>
-
-</div>
 
 <div class="doc doc-object doc-function">
 
@@ -3252,6 +3249,51 @@ with few CPUs that cannot handle the startup of all containers in time.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+<h3 id="sweagent.run.run_batch.RunBatchConfig.evaluate_and_redo_existing" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">evaluate_and_redo_existing</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">evaluate_and_redo_existing</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.Self">Self</span></span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>sweagent/run/run_batch.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">"after"</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_and_redo_existing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">instances</span><span class="p">,</span> <span class="n">SWEBenchInstances</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">instances</span><span class="o">.</span><span class="n">evaluate</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">redo_existing</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">"Cannot evaluate and redo existing at the same time. This would cause invalid results, because "</span>
+            <span class="s2">"after the first merge_preds gives you a preds.json, this file would be submitted to SB-CLI, causing"</span>
+            <span class="s2">"evaluation of old instances, which could then not be overwritten by the new ones."</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div></td></tr></tbody></table></div>
+            </details>
+    </div>
+
+</div>
+
 
 
   </div>
@@ -3276,8 +3318,87 @@ with few CPUs that cannot handle the startup of all containers in time.</p>
                 
 
 
+<div id="maintenance-popup-overlay" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-default-fg-color, #333);
+    border-radius: 12px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--md-text-font-family);
+  ">
+    <div style="font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.8rem;">
+      <p style="margin: 0 0 0.4rem;">SWE-agent has been superseded by <strong>mini-swe-agent</strong>.</p>
+      <p style="margin: 0 0 0.4rem;">mini-swe-agent is simpler &amp; more flexible while still being as performant.</p>
+      <p style="margin: 0;">See the <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a> for more details about why you should switch.
+      <br>SWE-agent is now in maintenance-only mode.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://mini-swe-agent.com" style="
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: #0099ff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='#007acc'" onmouseout="this.style.background='#0099ff'">
+        Check out mini-swe-agent
+      </a>
+      <button onclick="dismissMaintenancePopup()" style="
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+        color: var(--md-default-fg-color, #333);
+        cursor: pointer;
+        font-size: 0.88rem;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--md-code-bg-color, #eee)'" onmouseout="this.style.background='transparent'">
+        Continue to SWE-agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function dismissMaintenancePopup() {
+  document.getElementById('maintenance-popup-overlay').style.display = 'none';
+  sessionStorage.setItem('maintenance-popup-dismissed', '1');
+}
+
+(function() {
+  if (!sessionStorage.getItem('maintenance-popup-dismissed')) {
+    var overlay = document.getElementById('maintenance-popup-overlay');
+    overlay.style.display = 'flex';
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissMaintenancePopup();
+    });
+  }
+})();
+</script>
+
+<!-- Floating Bubbles -->
 <div class="floating-bubbles">
 <div class="floating-bubbles-title">Our projects</div>
+  <a href="https://mini-swe-agent.com/" class="bubble" title="Mini-SWE-Agent">
+    <img src="../../assets/mini_logo.svg" alt="Mini-SWE-Agent">
+    <span class="bubble-tooltip">Mini-SWE-Agent</span>
+  </a>
   <a href="https://swe-rex.com/" class="bubble" title="SWE-rex">
     <img src="../../assets/swerex_logo.svg" alt="SWE-rex">
     <span class="bubble-tooltip">SWE-ReX</span>
@@ -3389,4 +3510,4 @@ with few CPUs that cannot handle the startup of all containers in time.</p>
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html><!-- Floating Bubbles -->
+</script></body></html><!-- Maintenance mode popup -->
