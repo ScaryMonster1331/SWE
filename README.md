@@ -3,7 +3,6 @@
     <img src="assets/swe-agent-banner.png" alt="swe-agent.com" style="height: 7em" />
   </a>
 </p>
-
 <p align="center">
 <a href="https://swe-agent.com/latest/"><img src="https://img.shields.io/badge/Docs-green?style=for-the-badge&logo=materialformkdocs&logoColor=white" alt="Docs"></a>
 <a href="https://swe-bench.slack.com"><img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack"></a>
@@ -143,4 +142,4 @@ MIT. Check `LICENSE`.
 [![Markdown links](https://github.com/SWE-agent/SWE-agent/actions/workflows/check-links-periodic.yaml/badge.svg)](https://github.com/SWE-agent/SWE-agent/actions/workflows/check-links-periodic.yaml)
 
 </div>
-jjy
+jjy

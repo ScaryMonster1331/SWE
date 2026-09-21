@@ -1,7 +1,8 @@
 env:
   deployment:
     type: docker
-    image: python:3.11
+    image: sweagent-runtime:3.11
+    startup_timeout: 600
     python_standalone_dir: ""
 agent:
   model:
@@ -19,10 +20,16 @@ agent:
     max_output_tokens: 393216
 
   tools:
+    bundles:
+      - path: .runtime-tools/registry
+      - path: .runtime-tools/edit_anthropic
+      - path: .runtime-tools/review_on_submit_m
     parse_function:
       # DeepSeek 支持工具调用时使用
       type: function_calling
 
   # 默认配置中的 cache_control 是给 Anthropic 用的，DeepSeek 建议关闭
   history_processors: []
+
+
 
