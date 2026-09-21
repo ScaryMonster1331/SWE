@@ -1509,8 +1509,6 @@
       
         
       
-        
-      
     
     
     
@@ -1631,34 +1629,6 @@
     
   
     Environment
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/env_utils/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Environment utils
   
 
     
@@ -1853,6 +1823,51 @@ Run them with</p>
 <p>Some of the tests might be slower than others. You can exclude them with</p>
 <div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>-m<span class="w"> </span><span class="s2">"not slow"</span>
 </code></pre></div>
+<p>You can run all tests in parallel with <code>pytest-xdist</code>:</p>
+<div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>-n<span class="w"> </span>auto
+</code></pre></div>
+<p>If you are using VSCode, you might want to add the following two files:</p>
+<details>
+<summary>`.vscode/launch.json`</summary>
+
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Python: Debug Tests"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"debugpy"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"program"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${file}"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"purpose"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"debug-test"</span><span class="p">],</span>
+<span class="w">            </span><span class="nt">"console"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integratedTerminal"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"PYTEST_ADDOPTS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"--no-cov"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">"justMyCode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+
+<details>
+<summary>`.vscode/settings.json`</summary>
+
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"python.testing.pytestArgs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"sweagent"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"--cov=sweagent/"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"--cov-report=xml:cov.xml"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"-n"</span><span class="p">,</span><span class="w"> </span><span class="s2">"auto"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"tests"</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"python.testing.unittestEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"python.testing.pytestEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"git.ignoreLimitWarning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+
 <h2 id="tips-for-pull-requests">Tips for pull requests</h2>
 <ul>
 <li>If you see a lot of formatting-related merge conflicts, please see <a href="../formatting_conflicts/">here</a>.</li>
