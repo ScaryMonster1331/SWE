@@ -1,0 +1,28 @@
+env:
+  deployment:
+    type: docker
+    image: python:3.11
+    python_standalone_dir: ""
+agent:
+  model:
+    name: deepseek/deepseek-flash
+
+    # deepseek-flash 可能不在 LiteLLM 的计费表中，因此关闭自动费用限制
+    per_instance_cost_limit: 0
+    total_cost_limit: 0
+
+    # 用调用次数限制运行规模
+    per_instance_call_limit: 100
+
+    # 按 DeepSeek 控制台实际参数调整
+    max_input_tokens: 1000000
+    max_output_tokens: 393216
+
+  tools:
+    parse_function:
+      # DeepSeek 支持工具调用时使用
+      type: function_calling
+
+  # 默认配置中的 cache_control 是给 Anthropic 用的，DeepSeek 建议关闭
+  history_processors: []
+
